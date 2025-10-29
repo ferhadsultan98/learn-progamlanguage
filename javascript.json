@@ -1,0 +1,24 @@
+[
+  {
+    "lessonTitle": "Funksiyalar və Scope",
+    "theory_questions": [
+      { "question": "JavaScript-də funksiya nədir?", "answer": "Funksiya, müəyyən bir tapşırığı yerinə yetirmək üçün nəzərdə tutulmuş təkrar istifadə edilə bilən kod blokudur. O, parametrlər qəbul edə və bir dəyər qaytara bilər." },
+      { "question": "`function declaration` və `function expression` arasındakı fərq nədir?", "answer": "`Function declaration` (məsələn, `function test() {}`) hosting-ə məruz qalır, yəni təyin olunmazdan əvvəl çağırıla bilər. `Function expression` (məsələn, `const test = function() {}`) isə hosting-ə məruz qalmır və yalnız təyin olunduqdan sonra çağırıla bilər." },
+      { "question": "Arrow Function (`=>`) nədir və onun üstünlükləri nələrdir?", "answer": "Arrow function, funksiya yazmaq üçün daha qısa bir sintaksis təqdim edir. Onun əsas üstünlüyü, özünün `this` kontekstinə malik olmamasıdır; o, `this` dəyərini əhatə edən (lexical) scope-dan götürür." },
+      { "question": "`scope` (əhatə dairəsi) nə deməkdir?", "answer": "Scope, dəyişənlərin və funksiyaların əlçatan olduğu kontekstdir. JavaScript-də əsasən Global Scope və Local Scope (və ya Function Scope) mövcuddur." },
+      { "question": "`let`, `const` və `var` arasındakı fərqləri izah edin.", "answer": "`var` funksiya scope-una malikdir və hosting-ə məruz qalır. `let` və `const` isə blok scope-una (`{}`) malikdir və hosting-ə məruz qalmır (temporal dead zone). `const` ilə təyin olunan dəyişənin dəyəri yenidən təyin edilə bilməz." },
+      { "question": "`closure` (qapanma) nədir?", "answer": "Closure, bir funksiyanın öz leksik əhatə dairəsindəki (lexical scope) dəyişənlərə, hətta həmin əhatə dairəsi artıq mövcud olmadıqda belə, giriş imkanı olan bir xüsusiyyətdir. Yəni, daxili funksiya xarici funksiyanın dəyişənlərini 'xatırlayır'." },
+      { "question": "IIFE (Immediately Invoked Function Expression) nədir və nə üçün istifadə olunur?", "answer": "IIFE, təyin olunduğu anda dərhal icra edilən bir funksiyadır. O, qlobal scope-u çirkləndirmədən təcrid olunmuş bir scope yaratmaq üçün istifadə olunur." },
+      { "question": "`callback` funksiyası nədir?", "answer": "Callback, başqa bir funksiyaya arqument olaraq ötürülən və həmin funksiyanın daxilində daha sonra icra edilən bir funksiyadır. Bu, asinxron əməliyyatlarda geniş istifadə olunur." },
+      { "question": "`Pure Function` (Saf Funksiya) konsepsiyasını izah edin.", "answer": "Saf funksiya iki əsas qaydaya əməl edir: 1) Eyni girişlər üçün həmişə eyni nəticəni qaytarır. 2) Heç bir yan təsiri (side effect) yoxdur, yəni öz scope-undan kənarda heç bir dəyişiklik etmir." },
+      { "question": "`this` açar sözü necə işləyir?", "answer": "`this`-in dəyəri onun necə çağırılmasından asılıdır. Bir obyektin metodu olaraq çağırıldıqda, `this` həmin obyektə işarə edir. Sadə bir funksiya kimi çağırıldıqda, (strict mode-da `undefined`, digər hallarda isə global obyektə) işarə edir. Arrow function-larda isə `this` leksik scope-dan götürülür." }
+    ],
+    "practice_tasks": [
+      { "title": "İki Ədədin Cəmi", "description": "İki ədədi parametr olaraq qəbul edən və onların cəmini qaytaran bir funksiya yazın. Həm 'function declaration', həm də 'arrow function' sintaksisi ilə yazın.", "solution": "// Function Declaration\nfunction sumDeclaration(a, b) {\n  return a + b;\n}\n\n// Arrow Function\nconst sumArrow = (a, b) => a + b;" },
+      { "title": "Ad və Soyad Birləşdirici", "description": "'firstName' və 'lastName' parametrlərini qəbul edən və tam adı (məsələn, 'Ali Valiyev') qaytaran bir funksiya yaradın.", "solution": "function getFullName(firstName, lastName) {\n  return `${firstName} ${lastName}`;\n}" },
+      { "title": "Massivdəki Ən Böyük Ədədi Tapan Funksiya", "description": "Ədədlərdən ibarət bir massivi parametr olaraq qəbul edən və massivdəki ən böyük ədədi qaytaran bir funksiya yazın.", "solution": "function findMax(arr) {\n  if (arr.length === 0) return undefined;\n  return Math.max(...arr);\n}" },
+      { "title": "Sayğac (Counter) Closure", "description": "Bir sayğac funksiyası yaradın. Bu funksiya hər dəfə çağırıldıqda dəyəri bir vahid artan bir daxili dəyişəni olan başqa bir funksiya qaytarsın (closure istifadə edin).", "solution": "function createCounter() {\n  let count = 0;\n  return function() {\n    count++;\n    return count;\n  };\n}\n\nconst counter = createCounter();\nconsole.log(counter()); // 1\nconsole.log(counter()); // 2" },
+      { "title": "Asinxron Gecikmə Funksiyası", "description": "Müəyyən bir müddət (ms) gözləyən və sonra verilmiş bir 'callback' funksiyasını icra edən `delay` adlı bir funksiya yazın (`setTimeout` istifadə edin).", "solution": "function delay(callback, ms) {\n  setTimeout(callback, ms);\n}\n\n// İstifadəsi:\ndelay(() => {\n  console.log('2 saniyə keçdi!');\n}, 2000);" }
+    ]
+  }
+]
