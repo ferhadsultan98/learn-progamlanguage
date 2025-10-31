@@ -4,176 +4,392 @@
     "theory_questions": [
       {
         "question": "React Node, Element və Component arasındakı fərq nədir?",
-        "answer": "React Node — React tərəfindən render edilə bilən hər bir dəyərdir (string, number, element və s.). React Element — `React.createElement()` və ya JSX nəticəsidir. Component isə funksional və ya klass tərzində yazılmış, JSX qaytaran bir funksiyadır."
+        "answer": "[translate:React Node] — [translate:React] tərəfindən [translate:render] edilə bilən hər bir dəyərdir ([translate:string], [translate:number], [translate:element] və s.). [translate:React Element] — `[translate:React.createElement]()` və ya [translate:JSX] nəticəsidir. [translate:Component] isə funksional və ya klass tərzində yazılmış, [translate:JSX] qaytaran bir funksiyadır."
       },
       {
         "question": "React listlərində array index-ni `key` kimi istifadə etməyin mənfi tərəfi nədir?",
-        "answer": "Array index dəyişdikdə React köhnə elementləri səhv bağlaya bilər. Bu, animasiyalar, input-lar və DOM yenilənməsində səhv davranışa səbəb olur. Həmişə unikal ID istifadə etmək tövsiyə olunur."
+        "answer": "[translate:Array index] dəyişdikdə [translate:React] köhnə elementləri səhv bağlaya bilər. Bu, animasiyalar, [translate:input]-lar və [translate:DOM] yenilənməsində səhv davranışa səbəb olur. Həmişə unikal [translate:ID] istifadə etmək tövsiyə olunur."
       },
       {
         "question": "Child komponentdən parent komponentə məlumat necə göndərilir?",
-        "answer": "Parent komponentdən callback funksiya props kimi göndərilir, child bu funksiyanı çağıraraq məlumatı parentə qaytarır. Məsələn: `onSelect(data)`."
+        "answer": "[translate:Parent] komponentdən [translate:callback] funksiya [translate:props] kimi göndərilir, [translate:child] bu funksiyanı çağıraraq məlumatı [translate:parent]-ə qaytarır. Məsələn: `[translate:onSelect(data)]`."
       },
       {
         "question": "`React.Children` API nə üçündür?",
-        "answer": "`React.Children` — `props.children` ilə işləməyə imkan verən xüsusi React API-dir. O, children-ləri saymaq (`Children.count()`), map etmək (`Children.map()`), ya da elementləri dəyişdirmək üçün istifadə olunur."
+        "answer": "`[translate:React.Children]` — `[translate:props.children]` ilə işləməyə imkan verən xüsusi [translate:React API]-dir. O, [translate:children]-ləri saymaq (`[translate:Children.count()]`), [translate:map] etmək (`[translate:Children.map()]`), ya da elementləri dəyişdirmək üçün istifadə olunur."
       },
       {
         "question": "`React.forwardRef` nə üçün istifadə olunur?",
-        "answer": "`React.forwardRef`, parent komponentin ref-ni child komponentin DOM elementinə ötürməyə imkan verir. Məsələn, `input`-a parentdən birbaşa fokus vermək üçün."
+        "answer": "`[translate:React.forwardRef]`, [translate:parent] komponentin [translate:ref]-ni [translate:child] komponentin [translate:DOM] elementinə ötürməyə imkan verir. Məsələn, `[translate:input]`-a [translate:parent]-dən birbaşa fokus vermək üçün."
       },
       {
         "question": "Reconciliation prosesi nədir?",
-        "answer": "React Virtual DOM-da dəyişiklikləri izləyir və əvvəlki versiya ilə müqayisə edərək yalnız dəyişmiş hissələri real DOM-a tətbiq edir. Bu prosesə reconciliation deyilir və performansı artırır."
+        "answer": "[translate:React Virtual DOM]-da dəyişiklikləri izləyir və əvvəlki versiya ilə müqayisə edərək yalnız dəyişmiş hissələri real [translate:DOM]-a tətbiq edir. Bu prosesə [translate:reconciliation] deyilir və performansı artırır."
       },
       {
         "question": "`React.cloneElement()` nə üçün istifadə olunur?",
-        "answer": "Bu metod mövcud bir React elementini klonlayır və ona yeni props əlavə etməyə imkan verir. Dinamik şəkildə child-lərin davranışını dəyişmək üçün istifadə olunur."
+        "answer": "Bu metod mövcud bir [translate:React] elementini klonlayır və ona yeni [translate:props] əlavə etməyə imkan verir. Dinamik şəkildə [translate:child]-lərin davranışını dəyişmək üçün istifadə olunur."
       },
       {
         "question": "Props-larda shallow comparison nədir?",
-        "answer": "React `React.memo` və `PureComponent` istifadə edərkən props-ları səthi müqayisə edir. Yəni yalnız birinci səviyyə dəyərləri yoxlayır, dərin obyektlər dəyişməsə də yeni referansla fərqli görünə bilər."
+        "answer": "[translate:React] `[translate:React.memo]` və `[translate:PureComponent]` istifadə edərkən [translate:props]-ları səthi müqayisə edir. Yəni yalnız birinci səviyyə dəyərləri yoxlayır, dərin obyektlər dəyişməsə də yeni referansla fərqli görünə bilər."
       },
       {
         "question": "JSX-də attribute forwarding nədir?",
-        "answer": "Attribute forwarding (`...restProps`) — komponentə gələn əlavə atributların HTML elementinə ötürülməsinə imkan verir. Bu, reusable komponentlərdə çox istifadə olunur."
+        "answer": "[translate:Attribute forwarding] (`[translate:...restProps]`) — komponentə gələn əlavə atributların [translate:HTML] elementinə ötürülməsinə imkan verir. Bu, [translate:reusable] komponentlərdə çox istifadə olunur."
       },
       {
         "question": "Props-ların immutability-si niyə vacibdir?",
-        "answer": "Props-ların dəyişdirilməməsi React-ın bir istiqamətli data axınını qoruyur. Əks halda komponentlərdə gözlənilməz UI dəyişiklikləri yarana bilər."
+        "answer": "[translate:Props]-ların dəyişdirilməməsi [translate:React]-ın bir istiqamətli data axınını qoruyur. Əks halda komponentlərdə gözlənilməz [translate:UI] dəyişiklikləri yarana bilər."
       },
       {
         "question": "`displayName` prop-u nə işə yarayır?",
-        "answer": "`displayName` komponentin adını debug və React Developer Tools-da göstərmək üçün istifadə olunur, xüsusilə HOC-larda faydalıdır."
+        "answer": "`[translate:displayName]` komponentin adını [translate:debug] və [translate:React Developer Tools]-da göstərmək üçün istifadə olunur, xüsusilə [translate:HOC]-larda faydalıdır."
       },
       {
         "question": "React komponentlərində `React.memo` ilə `useMemo` fərqi nədir?",
-        "answer": "`React.memo` komponent səviyyəsində render optimizasiyası üçündür, `useMemo` isə funksiyada dəyərləri yadda saxlamaq üçün istifadə olunur."
+        "answer": "`[translate:React.memo]` komponent səviyyəsində [translate:render] optimizasiyası üçündür, `[translate:useMemo]` isə funksiyada dəyərləri yadda saxlamaq üçün istifadə olunur."
       },
       {
         "question": "`React.lazy` və `Suspense` nə işə yarayır?",
-        "answer": "`React.lazy` komponentləri asinxron şəkildə yükləməyə, `Suspense` isə yükləmə müddətində fallback UI göstərməyə imkan verir."
+        "answer": "`[translate:React.lazy]` komponentləri asinxron şəkildə yükləməyə, `[translate:Suspense]` isə yükləmə müddətində [translate:fallback UI] göstərməyə imkan verir."
       },
       {
         "question": "Server Component-lərlə Client Component-lər arasında əsas fərq nədir?",
-        "answer": "Server Component-lər serverdə render olunur və yalnız serializable props qəbul edir, Client Component-lər isə browser-də interaktivlik təmin edir."
+        "answer": "[translate:Server Component]-lər serverdə [translate:render] olunur və yalnız [translate:serializable props] qəbul edir, [translate:Client Component]-lər isə [translate:browser]-də interaktivlik təmin edir."
       },
       {
         "question": "Props-larla memoization strategiyası necə işləyir?",
-        "answer": "`React.memo` yalnız dəyişən props olduqda komponenti yenidən render edir. Dərin obyektlərdə isə `useMemo` və `useCallback` istifadə olunur."
+        "answer": "`[translate:React.memo]` yalnız dəyişən [translate:props] olduqda komponenti yenidən [translate:render] edir. Dərin obyektlərdə isə `[translate:useMemo]` və `[translate:useCallback]` istifadə olunur."
       },
       {
         "question": "React komponentlərində error boundary nədir?",
-        "answer": "Error Boundary xüsusi komponentdir, o, child komponentlərdə baş verən səhvləri tutaraq fallback UI göstərir. Bunun üçün `componentDidCatch` və `getDerivedStateFromError` metodlarından istifadə olunur."
+        "answer": "[translate:Error Boundary] xüsusi komponentdir, o, [translate:child] komponentlərdə baş verən səhvləri tutaraq [translate:fallback UI] göstərir. Bunun üçün `[translate:componentDidCatch]` və `[translate:getDerivedStateFromError]` metodlarından istifadə olunur."
       },
       {
         "question": "`React.forwardRef` və `useImperativeHandle` birlikdə nə üçün istifadə olunur?",
-        "answer": "`useImperativeHandle`, parent komponentin forwarded ref vasitəsilə child komponentdə xüsusi metodlara çıxışını təmin edir."
+        "answer": "`[translate:useImperativeHandle]`, [translate:parent] komponentin [translate:forwarded ref] vasitəsilə [translate:child] komponentdə xüsusi metodlara çıxışını təmin edir."
       },
       {
         "question": "React komponentlərində event bubbling və capturing nədir?",
-        "answer": "Event bubbling — hadisənin DOM ağacında yuxarı doğru ötürülməsi, capturing isə aşağı doğru ötürülməsidir. React `onClick` hadisələrini default olaraq bubbling mərhələsində idarə edir."
+        "answer": "[translate:Event bubbling] — hadisənin [translate:DOM] ağacında yuxarı doğru ötürülməsi, [translate:capturing] isə aşağı doğru ötürülməsidir. [translate:React] `[translate:onClick]` hadisələrini [translate:default] olaraq [translate:bubbling] mərhələsində idarə edir."
       },
       {
         "question": "React komponentlərində `defaultProps` nə vaxt işləməyəcək?",
-        "answer": "Functional komponentlərdə `defaultProps` artıq deprecated sayılır, onun yerinə ES6 default parametrlər (`({name = 'Default'})`) istifadə olunur."
+        "answer": "Funksional komponentlərdə `[translate:defaultProps]` artıq [translate:deprecated] sayılır, onun yerinə [translate:ES6 default] parametrlər (`[translate:({name = 'Default'})]`) istifadə olunur."
       },
       {
         "question": "React komponentlərində attribute sanitization nə üçün vacibdir?",
-        "answer": "Zərərli input-ların (`<script>` və s.) DOM-a daxil olmasının qarşısını almaq üçün React avtomatik attribute sanitization tətbiq edir. Bu, XSS hücumlarına qarşı qoruma təmin edir."
+        "answer": "Zərərli [translate:input]-ların (`[translate:<script>]` və s.) [translate:DOM]-a daxil olmasının qarşısını almaq üçün [translate:React] avtomatik [translate:attribute sanitization] tətbiq edir. Bu, [translate:XSS] hücumlarına qarşı qoruma təmin edir."
       },
-      { "question": "React komponentləri hansı iki növ olur?", "answer": "Funksional və Klass komponentlər. Müasir React-da funksional komponentlər `Hooks` ilə geniş istifadə olunur." },
-      { "question": "React komponentlərində `props` nə işə yarayır?", "answer": "Komponentlər arasında məlumat ötürmək üçün istifadə olunur. Onlar dəyişdirilə bilməz (read-only) obyektlərdir." },
-      { "question": "`children` prop-u nə üçündür?", "answer": "Bir komponentin açılış və bağlanış tag-ları arasındakı kontenti ötürmək üçün istifadə olunur." },
-      { "question": "Props-ları necə default dəyərlərlə təmin etmək olar?", "answer": "Komponentdə `defaultProps` və ya ES6 destructuring zamanı default dəyərlər (`{title='Default'}`) vasitəsilə." },
-      { "question": "Props drilling nədir və necə həll olunur?", "answer": "Props-un çoxlu aralıq komponentlər vasitəsilə ötürülməsi halıdır. Context API və ya Redux ilə həll edilir." },
-      { "question": "Controlled və uncontrolled komponentlər fərqi nədir?", "answer": "Controlled komponentlərdə input dəyərləri state ilə idarə olunur, uncontrolled-da isə `ref` ilə." },
-      { "question": "JSX-də ifadələr necə daxil edilir?", "answer": "JSX daxilində ifadələr süslü mötərizələrlə (`{}`) daxil edilir." },
-      { "question": "React Fragment nədir və nə üçün istifadə olunur?", "answer": "Bir neçə elementi eyni səviyyədə qaytarmaq üçün istifadə olunur (`<>...</>`). DOM-a əlavə element əlavə etmir." },
-      { "question": "Komponentin `key` prop-u niyə vacibdir?", "answer": "List elementlərini unikal identifikasiya etmək üçün istifadə olunur, performansı artırır." },
-      { "question": "Pure Component nədir?", "answer": "Props və state dəyişmədikcə yenidən render olunmayan komponentdir." },
-      { "question": "React-də prop validation necə edilir?", "answer": "`PropTypes` kitabxanası vasitəsilə props-ların tip yoxlaması aparılır." },
-      { "question": "Spread operator ilə props necə ötürülür?", "answer": "`<Card {...user} />` şəklində, obyektin bütün xassələri props kimi ötürülür." },
-      { "question": "Reusable komponent necə dizayn olunur?", "answer": "Generic props-lar qəbul edən, style və davranışı kənardan təyin edilə bilən şəkildə dizayn olunur." },
-      { "question": "Conditional rendering nədir?", "answer": "Müəyyən şərtlərə görə fərqli JSX qaytarmaqdır, məsələn `condition ? <A/> : <B/>`." },
-      { "question": "JSX-in tərtibat mərhələsində nə baş verir?", "answer": "JSX `React.createElement()` çağırışlarına çevrilir və virtual DOM ağacına əlavə olunur." },
-      { "question": "Functional komponentdə props necə destructure edilir?", "answer": "Funksiya parametrində `{prop1, prop2}` şəklində destructure edilir." },
-      { "question": "Inline style necə ötürülür?", "answer": "Obyekt formasında `style={{color:'red', fontSize:18}}`." },
-      { "question": "Komponentlərdə dynamic className necə verilir?", "answer": "Template string və ya şərtli operator vasitəsilə: `className={active ? 'btn active' : 'btn'}`." },
-      { "question": "Component composition nədir?", "answer": "Bir komponentin başqa komponentlərdən ibarət olması, məsələn layout komponentlərdə children istifadəsi." },
-      { "question": "`React.memo` nə edir?", "answer": "Funksional komponenti memorization ilə optimallaşdırır, yalnız props dəyişəndə render edir." },
-      { "question": "Dynamic props nədir?", "answer": "Props-ların state və ya API nəticələrindən dinamik olaraq formalaşdırılmasıdır." },
-      { "question": "Parent-dən child komponentə event funksiyası necə ötürülür?", "answer": "Callback funksiyası props kimi ötürülür (`<Child onClick={handleClick}/>`)." },
-      { "question": "Props spreading risklidirmi?", "answer": "Bəli, çünki lazımsız dəyərlər övlad komponentə keçə bilər, security və performance riskləri yarada bilər." },
-      { "question": "JSX-də children kimi funksiyalar ötürmək mümkündürmü?", "answer": "Bəli, `render props` pattern ilə (`{props.renderData()}`) funksiyalar da children ola bilər." },
-      { "question": "Component-lərdə prop drilling-in alternativləri hansılardır?", "answer": "Context API, Redux, Zustand, Recoil kimi state menecment sistemləri." },
-      { "question": "Component render optimizasiyası üçün props necə rol oynayır?", "answer": "`React.memo` və `useCallback` ilə dəyişməyən props-lar üçün re-render qarşısı alınır." },
-      { "question": "Props və state fərqi nədir?", "answer": "Props xaricdən gəlir və dəyişdirilə bilməz, state isə komponent daxilində idarə olunur." },
-      { "question": "Stateless komponent nədir?", "answer": "Daxilində `state` istifadə etməyən, yalnız props qəbul edən komponent." },
-      { "question": "PropTypes ilə props yoxlaması necə aparılır?", "answer": "Komponentdə `Component.propTypes = { name: PropTypes.string.isRequired }` yazılır." },
-      { "question": "JSX-də component adları niyə böyük hərflə başlamalıdır?", "answer": "Kiçik hərfli adlar HTML tag kimi interpretasiya olunur, komponentlər böyük hərflə olmalıdır." },
-      { "question": "Children render pattern nədir?", "answer": "Children funksiyası vasitəsilə komponentin render məntiqini kənardan idarə etmək üsuludur." },
-      { "question": "Props ilə render funksiyası necə göndərilir?", "answer": "Parent komponentdən `renderItem` kimi funksiya göndərilir və övlad onu `props.renderItem(data)` ilə çağırır." },
-      { "question": "Component-lərdə fallback UI necə göstərilir?", "answer": "Props boş və ya səhv olduqda şərtli renderinglə `fallback` komponent göstərilir." },
-      { "question": "Dynamic prop name necə yaradıla bilər?", "answer": "Obyekt spread və computed property ilə (`<Comp {...{[propName]:value}} />`)." },
-      { "question": "Props ilə komponentlərin testlənməsi necə aparılır?", "answer": "Testdə komponent render olunur və ötürülən props nəticəsində çıxış yoxlanılır (`getByText`)." },
-      { "question": "Reusable komponentləri dizayn edərkən hansı prinsipə əməl edilməlidir?", "answer": "Komponentlər kiçik, sadə və bir məqsədə xidmət etməlidir. DRY (Don't Repeat Yourself) prinsipinə əməl edilməlidir." },
-      { "question": "Props-lar JSON formatında ötürülə bilərmi?", "answer": "Bəli, obyekt və massivlər props kimi ötürülə bilər (`<Card data={userData} />`)." },
-      { "question": "HOC (Higher-Order Component) nədir?", "answer": "Bir komponenti qəbul edib, təkmilləşdirilmiş yeni komponent qaytaran funksiya pattern-dir." },
-      { "question": "Komponentlər arasında data paylaşımı necə aparılır?", "answer": "Props-lar, Context API, Redux və ya state lifting vasitəsilə." },
-      { "question": "State lifting nədir?", "answer": "İki child komponent arasında data paylaşmaq üçün state-in parent-ə qaldırılması." },
-      { "question": "Props caching nə üçün edilir?", "answer": "`React.memo` və `useMemo` ilə eyni props üçün lazımsız renderlərin qarşısını almaq üçün." },
-      { "question": "Props-larla funksiyalar ötürüləndə `useCallback` niyə istifadə olunur?", "answer": "Funksiyanın hər renderdə yenidən yaradılmasının qarşısını almaq üçün." },
-      { "question": "Component composition və inheritance fərqi nədir?", "answer": "React composition-u (bir komponent içində digərini) tövsiyə edir, inheritance yox." },
-      { "question": "React komponentlərində attribute forwarding nədir?", "answer": "Props-ların HTML elementlərinə və ya digər komponentlərə ötürülməsidir (`...restProps`)." },
-      { "question": "Props-lar inline funksiyalarla ötürüləndə performans problemi yaradırmı?", "answer": "Bəli, hər renderdə yeni referans yaranır. `useCallback` istifadə edilməlidir." },
-      { "question": "Props vasitəsilə UI komponentlərdə tema necə dəyişir?", "answer": "Tema dəyərləri (`dark`, `light`) props kimi ötürülür və style dəyişir." },
-      { "question": "Props və context arasında fərq nədir?", "answer": "Props lokal data ötürür, Context isə qlobal data paylaşımı üçündür." },
-      { "question": "Componentdən parentə data necə göndərilir?", "answer": "Callback funksiyası props kimi göndərilir və child-da çağırılır." }
+      {
+        "question": "React komponentləri hansı iki növ olur?",
+        "answer": "Funksional və Klass komponentlər. Müasir [translate:React]-da funksional komponentlər `[translate:Hooks]` ilə geniş istifadə olunur."
+      },
+      {
+        "question": "React komponentlərində `props` nə işə yarayır?",
+        "answer": "Komponentlər arasında məlumat ötürmək üçün istifadə olunur. Onlar dəyişdirilə bilməz ([translate:read-only]) obyektlərdir."
+      },
+      {
+        "question": "`children` prop-u nə üçündür?",
+        "answer": "Bir komponentin açılış və bağlanış [translate:tag]-ları arasındakı kontenti ötürmək üçün istifadə olunur."
+      },
+      {
+        "question": "Props-ları necə default dəyərlərlə təmin etmək olar?",
+        "answer": "Komponentdə `[translate:defaultProps]` və ya [translate:ES6 destructuring] zamanı [translate:default] dəyərlər (`[translate:{title='Default'}]`) vasitəsilə."
+      },
+      {
+        "question": "Props drilling nədir və necə həll olunur?",
+        "answer": "[translate:Props]-un çoxlu aralıq komponentlər vasitəsilə ötürülməsi halıdır. [translate:Context API] və ya [translate:Redux] ilə həll edilir."
+      },
+      {
+        "question": "Controlled və uncontrolled komponentlər fərqi nədir?",
+        "answer": "[translate:Controlled] komponentlərdə [translate:input] dəyərləri [translate:state] ilə idarə olunur, [translate:uncontrolled]-da isə `[translate:ref]` ilə."
+      },
+      {
+        "question": "JSX-də ifadələr necə daxil edilir?",
+        "answer": "[translate:JSX] daxilində ifadələr süslü mötərizələrlə (`{}`) daxil edilir."
+      },
+      {
+        "question": "React Fragment nədir və nə üçün istifadə olunur?",
+        "answer": "Bir neçə elementi eyni səviyyədə qaytarmaq üçün istifadə olunur (`[translate:<>...</>]`). [translate:DOM]-a əlavə element əlavə etmir."
+      },
+      {
+        "question": "Komponentin `key` prop-u niyə vacibdir?",
+        "answer": "[translate:List] elementlərini unikal identifikasiya etmək üçün istifadə olunur, performansı artırır."
+      },
+      {
+        "question": "Pure Component nədir?",
+        "answer": "[translate:Props] və [translate:state] dəyişmədikcə yenidən [translate:render] olunmayan komponentdir."
+      },
+      {
+        "question": "React-də prop validation necə edilir?",
+        "answer": "`[translate:PropTypes]` kitabxanası vasitəsilə [translate:props]-ların tip yoxlaması aparılır."
+      },
+      {
+        "question": "Spread operator ilə props necə ötürülür?",
+        "answer": "`[translate:<Card {...user} />]` şəklində, obyektin bütün xassələri [translate:props] kimi ötürülür."
+      },
+      {
+        "question": "Reusable komponent necə dizayn olunur?",
+        "answer": "[translate:Generic props]-lar qəbul edən, [translate:style] və davranışı kənardan təyin edilə bilən şəkildə dizayn olunur."
+      },
+      {
+        "question": "Conditional rendering nədir?",
+        "answer": "Müəyyən şərtlərə görə fərqli [translate:JSX] qaytarmaqdır, məsələn `[translate:condition ? <A/> : <B/>]`."
+      },
+      {
+        "question": "JSX-in tərtibat mərhələsində nə baş verir?",
+        "answer": "[translate:JSX] `[translate:React.createElement()]` çağırışlarına çevrilir və virtual [translate:DOM] ağacına əlavə olunur."
+      },
+      {
+        "question": "Functional komponentdə props necə destructure edilir?",
+        "answer": "Funksiya parametrində `[translate:{prop1, prop2}]` şəklində [translate:destructure] edilir."
+      },
+      {
+        "question": "Inline style necə ötürülür?",
+        "answer": "Obyekt formasında `[translate:style={{color:'red', fontSize:18}}]`."
+      },
+      {
+        "question": "Komponentlərdə dynamic className necə verilir?",
+        "answer": "[translate:Template string] və ya şərtli operator vasitəsilə: `[translate:className={active ? 'btn active' : 'btn'}]`."
+      },
+      {
+        "question": "Component composition nədir?",
+        "answer": "Bir komponentin başqa komponentlərdən ibarət olması, məsələn [translate:layout] komponentlərdə [translate:children] istifadəsi."
+      },
+      {
+        "question": "`React.memo` nə edir?",
+        "answer": "Funksional komponenti [translate:memorization] ilə optimallaşdırır, yalnız [translate:props] dəyişəndə [translate:render] edir."
+      },
+      {
+        "question": "Dynamic props nədir?",
+        "answer": "[translate:Props]-ların [translate:state] və ya [translate:API] nəticələrindən dinamik olaraq formalaşdırılmasıdır."
+      },
+      {
+        "question": "Parent-dən child komponentə event funksiyası necə ötürülür?",
+        "answer": "[translate:Callback] funksiyası [translate:props] kimi ötürülür (`[translate:<Child onClick={handleClick}/>]`)."
+      },
+      {
+        "question": "Props spreading risklidirmi?",
+        "answer": "Bəli, çünki lazımsız dəyərlər övlad komponentə keçə bilər, [translate:security] və [translate:performance] riskləri yarada bilər."
+      },
+      {
+        "question": "JSX-də children kimi funksiyalar ötürmək mümkündürmü?",
+        "answer": "Bəli, `[translate:render props]` [translate:pattern] ilə (`[translate:{props.renderData()}]`) funksiyalar da [translate:children] ola bilər."
+      },
+      {
+        "question": "Component-lərdə prop drilling-in alternativləri hansılardır?",
+        "answer": "[translate:Context API], [translate:Redux], [translate:Zustand], [translate:Recoil] kimi [translate:state menecment] sistemləri."
+      },
+      {
+        "question": "Component render optimizasiyası üçün props necə rol oynayır?",
+        "answer": "`[translate:React.memo]` və `[translate:useCallback]` ilə dəyişməyən [translate:props]-lar üçün [translate:re-render] qarşısı alınır."
+      },
+      {
+        "question": "Props və state fərqi nədir?",
+        "answer": "[translate:Props] xaricdən gəlir və dəyişdirilə bilməz, [translate:state] isə komponent daxilində idarə olunur."
+      },
+      {
+        "question": "Stateless komponent nədir?",
+        "answer": "Daxilində `[translate:state]` istifadə etməyən, yalnız [translate:props] qəbul edən komponent."
+      },
+      {
+        "question": "PropTypes ilə props yoxlaması necə aparılır?",
+        "answer": "Komponentdə `[translate:Component.propTypes = { name: PropTypes.string.isRequired }]` yazılır."
+      },
+      {
+        "question": "JSX-də component adları niyə böyük hərflə başlamalıdır?",
+        "answer": "Kiçik hərfli adlar [translate:HTML tag] kimi [translate:interpretasiya] olunur, komponentlər böyük hərflə olmalıdır."
+      },
+      {
+        "question": "Children render pattern nədir?",
+        "answer": "[translate:Children] funksiyası vasitəsilə komponentin [translate:render] məntiqini kənardan idarə etmək üsuludur."
+      },
+      {
+        "question": "Props ilə render funksiyası necə göndərilir?",
+        "answer": "[translate:Parent] komponentdən `[translate:renderItem]` kimi funksiya göndərilir və övlad onu `[translate:props.renderItem(data)]` ilə çağırır."
+      },
+      {
+        "question": "Component-lərdə fallback UI necə göstərilir?",
+        "answer": "[translate:Props] boş və ya səhv olduqda şərtli [translate:rendering]-lə `[translate:fallback]` komponent göstərilir."
+      },
+      {
+        "question": "Dynamic prop name necə yaradıla bilər?",
+        "answer": "Obyekt [translate:spread] və [translate:computed property] ilə (`[translate:<Comp {...{[propName]:value}} />]`)."
+      },
+      {
+        "question": "Props ilə komponentlərin testlənməsi necə aparılır?",
+        "answer": "Testdə komponent [translate:render] olunur və ötürülən [translate:props] nəticəsində çıxış yoxlanılır (`[translate:getByText]`)."
+      },
+      {
+        "question": "Reusable komponentləri dizayn edərkən hansı prinsipə əməl edilməlidir?",
+        "answer": "Komponentlər kiçik, sadə və bir məqsədə xidmət etməlidir. [translate:DRY] ([translate:Don't Repeat Yourself]) prinsipinə əməl edilməlidir."
+      },
+      {
+        "question": "Props-lar JSON formatında ötürülə bilərmi?",
+        "answer": "Bəli, obyekt və massivlər [translate:props] kimi ötürülə bilər (`[translate:<Card data={userData} />]`)."
+      },
+      {
+        "question": "HOC (Higher-Order Component) nədir?",
+        "answer": "Bir komponenti qəbul edib, təkmilləşdirilmiş yeni komponent qaytaran funksiya [translate:pattern]-dir."
+      },
+      {
+        "question": "Komponentlər arasında data paylaşımı necə aparılır?",
+        "answer": "[translate:Props]-lar, [translate:Context API], [translate:Redux] və ya [translate:state lifting] vasitəsilə."
+      },
+      {
+        "question": "State lifting nədir?",
+        "answer": "İki [translate:child] komponent arasında data paylaşmaq üçün [translate:state]-in [translate:parent]-ə qaldırılması."
+      },
+      {
+        "question": "Props caching nə üçün edilir?",
+        "answer": "`[translate:React.memo]` və `[translate:useMemo]` ilə eyni [translate:props] üçün lazımsız [translate:render]-lərin qarşısını almaq üçün."
+      },
+      {
+        "question": "Props-larla funksiyalar ötürüləndə `useCallback` niyə istifadə olunur?",
+        "answer": "Funksiyanın hər [translate:render]-də yenidən yaradılmasının qarşısını almaq üçün."
+      },
+      {
+        "question": "Component composition və inheritance fərqi nədir?",
+        "answer": "[translate:React composition]-u (bir komponent içində digərini) tövsiyə edir, [translate:inheritance] yox."
+      },
+      {
+        "question": "React komponentlərində attribute forwarding nədir?",
+        "answer": "[translate:Props]-ların [translate:HTML] elementlərinə və ya digər komponentlərə ötürülməsidir (`[translate:...restProps]`)."
+      },
+      {
+        "question": "Props-lar inline funksiyalarla ötürüləndə performans problemi yaradırmı?",
+        "answer": "Bəli, hər [translate:render]-də yeni referans yaranır. `[translate:useCallback]` istifadə edilməlidir."
+      },
+      {
+        "question": "Props vasitəsilə UI komponentlərdə tema necə dəyişir?",
+        "answer": "Tema dəyərləri (`[translate:dark]`, `[translate:light]`) [translate:props] kimi ötürülür və [translate:style] dəyişir."
+      },
+      {
+        "question": "Props və context arasında fərq nədir?",
+        "answer": "[translate:Props] lokal data ötürür, [translate:Context] isə qlobal data paylaşımı üçündür."
+      },
+      {
+        "question": "Componentdən parentə data necə göndərilir?",
+        "answer": "[translate:Callback] funksiyası [translate:props] kimi göndərilir və [translate:child]-da çağırılır."
+      }
     ],
     "practice_tasks": [
-      { "title": "Reusable Button Komponenti", "description": "Dinamik rəng və ölçü qəbul edən `Button` komponenti yaradın.", "solution": "function Button({label, color='blue', size='md'}){return <button style={{background:color,fontSize:size==='lg'?20:14}}>{label}</button>}" },
-      { "title": "Props Destructuring", "description": "Destructuring ilə `User` komponenti yaradın.", "solution": "function User({name, age}){return <p>{name} ({age})</p>}" },
-      { "title": "Children ilə Layout", "description": "`Layout` komponenti yaradın və `children` göstərsin.", "solution": "function Layout({children}){return <div className='layout'>{children}</div>}" },
-      { "title": "Props Drilling nümunəsi", "description": "Üç səviyyəli komponentdə `username` props-u parent-dən ən dərin child-ə ötürün.", "solution": "function A(){return <B name='Ali'/>}function B({name}){return <C name={name}/>}function C({name}){return <h3>{name}</h3>}" },
-      { "title": "Conditional Rendering", "description": "Login olmuş istifadəçiyə görə fərqli JSX göstərin.", "solution": "function Greeting({isLoggedIn}){return isLoggedIn?<h1>Welcome!</h1>:<h1>Please login</h1>}" },
-      { "title": "Reusable Input komponenti", "description": "`Input` komponenti `type`, `placeholder`, `onChange` props-ları qəbul etsin.", "solution": "function Input({type='text',placeholder,onChange}){return <input type={type} placeholder={placeholder} onChange={onChange}/>;}" },
-      { "title": "Render Props Pattern", "description": "`DataList` komponentinə `renderItem` funksiyası göndərin.", "solution": "function DataList({data,renderItem}){return <ul>{data.map(renderItem)}</ul>}" },
-      { "title": "Children ilə Modal", "description": "`Modal` komponenti `children` göstərsin və aç/qapla idarə olunsun.", "solution": "function Modal({open,children}){return open?<div className='modal'>{children}</div>:null}" },
-      { "title": "Reusable Badge", "description": "Rəng və mətn qəbul edən `Badge` komponenti yaradın.", "solution": "function Badge({text,color='gray'}){return<span style={{background:color}}>{text}</span>}" },
-      { "title": "Props ilə Theme dəyişimi", "description": "`Box` komponenti `theme` props-u ilə tünd və açıq rejimdə rəngləri dəyişsin.", "solution": "function Box({theme}){const bg=theme==='dark'?'#222':'#fff';return<div style={{background:bg}}>Box</div>}" },
-      { "title": "Dynamic Element Prop", "description": "`Text` komponentinə `as` prop əlavə edin və HTML tag dəyişsin.", "solution": "function Text({as:Tag='p',children}){return<Tag>{children}</Tag>}" },
-      { "title": "Props ilə Icon Komponenti", "description": "`Icon` komponenti `name` props-u ilə uyğun SVG göstərsin.", "solution": "function Icon({name}){switch(name){case'check':return<svg>...</svg>;default:return null;}}" },
-      { "title": "Props ilə Language Switch", "description": "`Text` komponenti `lang` props-u ilə fərqli dildə text göstərsin.", "solution": "function Text({lang}){return<p>{lang==='az'?'Salam':'Hello'}</p>}" },
-      { "title": "Props ilə Tooltip", "description": "`Tooltip` komponenti `message` props-u ilə hover zamanı mesaj göstərsin.", "solution": "function Tooltip({message,children}){return<span title={message}>{children}</span>}" },
-      { "title": "Reusable List Item", "description": "`List` komponenti `data` və `renderItem` props-ları ilə siyahı göstərsin.", "solution": "function List({data,renderItem}){return<ul>{data.map(renderItem)}</ul>}" },
-      { "title": "Fallback Props Rendering", "description": "`Avatar` komponenti şəkil olmadıqda default şəkil göstərsin.", "solution": "function Avatar({src}){return<img src={src||'/default.png'} alt='avatar'/>}" },
-      { "title": "Dynamic Prop Forwarding", "description": "Props-ları HTML elementinə `...rest` ilə ötürün.", "solution": "function Button({children,...rest}){return<button {...rest}>{children}</button>}" },
-      { "title": "Props ilə Accordion", "description": "`Accordion` komponenti `items` props-u ilə dinamik başlıqlar göstərsin.", "solution": "function Accordion({items}){const [open,setOpen]=useState(null);return<div>{items.map((it,i)=><div key={i}><h4 onClick={()=>setOpen(open===i?null:i)}>{it.title}</h4>{open===i&&<p>{it.content}</p>}</div>)}</div>}" },
       {
-        "title": "forwardRef ilə Input Fokuslama",
-        "description": "`CustomInput` komponenti yaradın və parent komponentdə `ref` vasitəsilə input-a fokus verin.",
-        "solution": "const CustomInput = React.forwardRef((props, ref) => <input ref={ref} {...props}/>);\nfunction App(){const inputRef=useRef();return(<><CustomInput ref={inputRef}/><button onClick={()=>inputRef.current.focus()}>Fokusla</button></>)}"
+        "title": "[translate:Reusable Button] Komponenti",
+        "description": "Dinamik rəng və ölçü qəbul edən `[translate:Button]` komponenti yaradın.",
+        "solution": "[translate:function Button({label, color='blue', size='md'}){return <button style={{background:color,fontSize:size==='lg'?20:14}}>{label}</button>}]"
       },
       {
-        "title": "cloneElement ilə Child Props dəyişdirmə",
-        "description": "`Wrapper` komponenti `children`-ə əlavə props versin (`color='red'`).",
-        "solution": "function Wrapper({children}){return React.cloneElement(children,{color:'red'})}\nfunction Text({color}){return<p style={{color}}>Hello</p>}"
+        "title": "[translate:Props Destructuring]",
+        "description": "[translate:Destructuring] ilə `[translate:User]` komponenti yaradın.",
+        "solution": "[translate:function User({name, age}){return <p>{name} ({age})</p>}]"
       },
       {
-        "title": "Error Boundary nümunəsi",
-        "description": "Səhv baş verən komponenti tutmaq üçün `ErrorBoundary` komponenti yaradın.",
-        "solution": "class ErrorBoundary extends React.Component{state={hasError:false};static getDerivedStateFromError(){return{hasError:true}};componentDidCatch(e){console.log(e)}render(){return this.state.hasError?<h2>Xəta!</h2>:this.props.children}}"
+        "title": "[translate:Children] ilə [translate:Layout]",
+        "description": "`[translate:Layout]` komponenti yaradın və `[translate:children]` göstərsin.",
+        "solution": "[translate:function Layout({children}){return <div className='layout'>{children}</div>}]"
       },
       {
-        "title": "lazy və Suspense ilə Async Komponent",
-        "description": "Komponenti `React.lazy` ilə import edin və `Suspense` içində render edin.",
-        "solution": "const Profile = React.lazy(()=>import('./Profile'));\nfunction App(){return(<React.Suspense fallback={<p>Yüklənir...</p>}><Profile/></React.Suspense>)}"
+        "title": "[translate:Props Drilling] nümunəsi",
+        "description": "Üç səviyyəli komponentdə `[translate:username]` [translate:props]-u [translate:parent]-dən ən dərin [translate:child]-ə ötürün.",
+        "solution": "[translate:function A(){return <B name='Ali'/>}function B({name}){return <C name={name}/>}function C({name}){return <h3>{name}</h3>}]"
       },
       {
-        "title": "useImperativeHandle ilə Custom Ref Metodu",
-        "description": "Child komponentdə `focusInput` adlı ref metodu yaradın.",
-        "solution": "const Input = React.forwardRef((props,ref)=>{const inputRef=useRef();useImperativeHandle(ref,()=>({focusInput:()=>inputRef.current.focus()}));return<input ref={inputRef}/>});\nfunction App(){const ref=useRef();return(<><Input ref={ref}/><button onClick={()=>ref.current.focusInput()}>Fokusla</button></>)}"
+        "title": "[translate:Conditional Rendering]",
+        "description": "[translate:Login] olmuş istifadəçiyə görə fərqli [translate:JSX] göstərin.",
+        "solution": "[translate:function Greeting({isLoggedIn}){return isLoggedIn?<h1>Welcome!</h1>:<h1>Please login</h1>}]"
+      },
+      {
+        "title": "[translate:Reusable Input] komponenti",
+        "description": "`[translate:Input]` komponenti `[translate:type]`, `[translate:placeholder]`, `[translate:onChange]` [translate:props]-ları qəbul etsin.",
+        "solution": "[translate:function Input({type='text',placeholder,onChange}){return <input type={type} placeholder={placeholder} onChange={onChange}/>;}]"
+      },
+      {
+        "title": "[translate:Render Props Pattern]",
+        "description": "`[translate:DataList]` komponentinə `[translate:renderItem]` funksiyası göndərin.",
+        "solution": "[translate:function DataList({data,renderItem}){return <ul>{data.map(renderItem)}</ul>}]"
+      },
+      {
+        "title": "[translate:Children] ilə [translate:Modal]",
+        "description": "`[translate:Modal]` komponenti `[translate:children]` göstərsin və aç/qapla idarə olunsun.",
+        "solution": "[translate:function Modal({open,children}){return open?<div className='modal'>{children}</div>:null}]"
+      },
+      {
+        "title": "[translate:Reusable Badge]",
+        "description": "Rəng və mətn qəbul edən `[translate:Badge]` komponenti yaradın.",
+        "solution": "[translate:function Badge({text,color='gray'}){return<span style={{background:color}}>{text}</span>}]"
+      },
+      {
+        "title": "[translate:Props] ilə [translate:Theme] dəyişimi",
+        "description": "`[translate:Box]` komponenti `[translate:theme]` [translate:props]-u ilə tünd və açıq rejimdə rəngləri dəyişsin.",
+        "solution": "[translate:function Box({theme}){const bg=theme==='dark'?'#222':'#fff';return<div style={{background:bg}}>Box</div>}]"
+      },
+      {
+        "title": "[translate:Dynamic Element Prop]",
+        "description": "`[translate:Text]` komponentinə `[translate:as]` [translate:prop] əlavə edin və [translate:HTML tag] dəyişsin.",
+        "solution": "[translate:function Text({as:Tag='p',children}){return<Tag>{children}</Tag>}]"
+      },
+      {
+        "title": "[translate:Props] ilə [translate:Icon] Komponenti",
+        "description": "`[translate:Icon]` komponenti `[translate:name]` [translate:props]-u ilə uyğun [translate:SVG] göstərsin.",
+        "solution": "[translate:function Icon({name}){switch(name){case'check':return<svg>...</svg>;default:return null;}}]"
+      },
+      {
+        "title": "[translate:Props] ilə [translate:Language Switch]",
+        "description": "`[translate:Text]` komponenti `[translate:lang]` [translate:props]-u ilə fərqli dildə [translate:text] göstərsin.",
+        "solution": "[translate:function Text({lang}){return<p>{lang==='az'?'Salam':'Hello'}</p>}]"
+      },
+      {
+        "title": "[translate:Props] ilə [translate:Tooltip]",
+        "description": "`[translate:Tooltip]` komponenti `[translate:message]` [translate:props]-u ilə [translate:hover] zamanı mesaj göstərsin.",
+        "solution": "[translate:function Tooltip({message,children}){return<span title={message}>{children}</span>}]"
+      },
+      {
+        "title": "[translate:Reusable List Item]",
+        "description": "`[translate:List]` komponenti `[translate:data]` və `[translate:renderItem]` [translate:props]-ları ilə siyahı göstərsin.",
+        "solution": "[translate:function List({data,renderItem}){return<ul>{data.map(renderItem)}</ul>}]"
+      },
+      {
+        "title": "[translate:Fallback Props Rendering]",
+        "description": "`[translate:Avatar]` komponenti şəkil olmadıqda [translate:default] şəkil göstərsin.",
+        "solution": "[translate:function Avatar({src}){return<img src={src||'/default.png'} alt='avatar'/>}]"
+      },
+      {
+        "title": "[translate:Dynamic Prop Forwarding]",
+        "description": "[translate:Props]-ları [translate:HTML] elementinə `[translate:...rest]` ilə ötürün.",
+        "solution": "[translate:function Button({children,...rest}){return<button {...rest}>{children}</button>}]"
+      },
+      {
+        "title": "[translate:Props] ilə [translate:Accordion]",
+        "description": "`[translate:Accordion]` komponenti `[translate:items]` [translate:props]-u ilə dinamik başlıqlar göstərsin.",
+        "solution": "[translate:function Accordion({items}){const [open,setOpen]=useState(null);return<div>{items.map((it,i)=><div key={i}><h4 onClick={()=>setOpen(open===i?null:i)}>{it.title}</h4>{open===i&&<p>{it.content}</p>}</div>)}</div>}]"
+      },
+      {
+        "title": "[translate:forwardRef] ilə [translate:Input] Fokuslama",
+        "description": "`[translate:CustomInput]` komponenti yaradın və [translate:parent] komponentdə `[translate:ref]` vasitəsilə [translate:input]-a fokus verin.",
+        "solution": "[translate:const CustomInput = React.forwardRef((props, ref) => <input ref={ref} {...props}/>);\nfunction App(){const inputRef=useRef();return(<><CustomInput ref={inputRef}/><button onClick={()=>inputRef.current.focus()}>Fokusla</button></>)}]"
+      },
+      {
+        "title": "[translate:cloneElement] ilə [translate:Child Props] dəyişdirmə",
+        "description": "`[translate:Wrapper]` komponenti `[translate:children]`-ə əlavə [translate:props] versin (`[translate:color='red']`).",
+        "solution": "[translate:function Wrapper({children}){return React.cloneElement(children,{color:'red'})}\nfunction Text({color}){return<p style={{color}}>Hello</p>}]"
+      },
+      {
+        "title": "[translate:Error Boundary] nümunəsi",
+        "description": "Səhv baş verən komponenti tutmaq üçün `[translate:ErrorBoundary]` komponenti yaradın.",
+        "solution": "[translate:class ErrorBoundary extends React.Component{state={hasError:false};static getDerivedStateFromError(){return{hasError:true}};componentDidCatch(e){console.log(e)}render(){return this.state.hasError?<h2>Xəta!</h2>:this.props.children}}]"
+      },
+      {
+        "title": "[translate:lazy] və [translate:Suspense] ilə [translate:Async] Komponent",
+        "description": "Komponenti `[translate:React.lazy]` ilə [translate:import] edin və `[translate:Suspense]` içində [translate:render] edin.",
+        "solution": "[translate:const Profile = React.lazy(()=>import('./Profile'));\nfunction App(){return(<React.Suspense fallback={<p>Yüklənir...</p>}><Profile/></React.Suspense>)}]"
+      },
+      {
+        "title": "[translate:useImperativeHandle] ilə [translate:Custom Ref] Metodu",
+        "description": "[translate:Child] komponentdə `[translate:focusInput]` adlı [translate:ref] metodu yaradın.",
+        "solution": "[translate:const Input = React.forwardRef((props,ref)=>{const inputRef=useRef();useImperativeHandle(ref,()=>({focusInput:()=>inputRef.current.focus()}));return<input ref={inputRef}/>});\nfunction App(){const ref=useRef();return(<><Input ref={ref}/><button onClick={()=>ref.current.focusInput()}>Fokusla</button></>)}]"
       }
     ]
   }
