@@ -2,179 +2,525 @@
   {
     "lessonTitle": "Funksiyalar və Scope",
     "theory_questions": [
-      { "question": "JavaScript-də funksiya nədir?", "answer": "Funksiya, müəyyən bir tapşırığı yerinə yetirmək üçün nəzərdə tutulmuş təkrar istifadə edilə bilən kod blokudur." },
-      { "question": "`function declaration` və `function expression` arasındakı fərq nədir?", "answer": "`Function declaration` hosting-ə məruz qalır, `function expression` isə yalnız təyin olunduqdan sonra çağırıla bilər." },
-      { "question": "Arrow Function nədir?", "answer": "Arrow function qısa sintaksisə malik funksiyadır və öz `this` kontekstinə sahib deyil." },
-      { "question": "`scope` nədir?", "answer": "Scope dəyişənlərin və funksiyaların əlçatan olduğu kontekstdir." },
-      { "question": "`closure` nədir?", "answer": "Closure, bir funksiyanın öz əhatə dairəsindəki dəyişənlərə giriş imkanı saxlamasıdır." },
-      { "question": "`this` necə işləyir?", "answer": "`this` funksiyanın necə çağırıldığına görə dəyişir. Arrow function-da `this` yuxarıdakı scope-dan gəlir." },
-      { "question": "IIFE nədir?", "answer": "Dərhal çağırılan funksiya ifadəsidir, təcrid olunmuş scope yaratmaq üçün istifadə olunur." },
-      { "question": "Callback funksiyası nədir?", "answer": "Callback başqa funksiyaya arqument kimi ötürülən və sonra çağırılan funksiyadır." },
-      { "question": "`Pure Function` nədir?", "answer": "Eyni giriş üçün həmişə eyni nəticə qaytaran və yan təsiri olmayan funksiyadır." },
-      { "question": "`var`, `let`, `const` fərqi nədir?", "answer": "`var` function scope-ludur, `let` və `const` block scope-ludur." },
-      { "question": "Hoisting nədir?", "answer": "Dəyişən və funksiyaların yuxarıya qaldırılması hadisəsidir." },
-      { "question": "Block Scope nədir?", "answer": "Məsələn `{}` içərisində təyin olunan dəyişənlərin yalnız həmin blokda əlçatan olmasıdır." },
-      { "question": "Function Scope nədir?", "answer": "Funksiya içində təyin olunan dəyişənlərin yalnız həmin funksiyada görünməsidir." },
-      { "question": "Lexical Scope nədir?", "answer": "Funksiya harada yaradılıbsa, həmin yerdəki scope-a giriş edə bilməsidir." },
-      { "question": "High Order Function nədir?", "answer": "Başqa funksiyanı arqument kimi qəbul edən və ya funksiyanı qaytaran funksiyadır." },
-      { "question": "Currying nədir?", "answer": "Bir funksiyanın birdən çox arqumentini tək-tək qəbul edən ardıcıl funksiyalara bölməkdir." },
-      { "question": "Function Composition nədir?", "answer": "Birdən çox funksiyanın nəticəsini bir-birinə ötürərək yeni funksiya yaratmaqdır." },
-      { "question": "Immediately Invoked Function Expression nə işə yarayır?", "answer": "Global scope-u çirkləndirmədən lokal icra mühiti yaradır." },
-      { "question": "Recursion nədir?", "answer": "Funksiyanın öz-özünü çağırmasıdır." },
-      { "question": "Tail Recursion nədir?", "answer": "Funksiya özünü ən sonda çağırırsa, bu performans baxımından optimallaşdırıla bilir." },
-      { "question": "Anonymous Function nədir?", "answer": "Adı olmayan funksiyadır, adətən callback olaraq istifadə olunur." },
-      { "question": "Default parameter nədir?", "answer": "Parametr ötürülmədikdə avtomatik təyin olunan dəyərdir." },
-      { "question": "Rest parameter nədir?", "answer": "Bir neçə arqumenti array kimi qəbul etməyə imkan verir (`...args`)." },
-      { "question": "Spread operator nə edir?", "answer": "Array və obyektləri genişləndirərək fərdi elementlərə ayırır." },
-      { "question": "Arrow function-da `this` necə davranır?", "answer": "Arrow function-da `this` lexical scope-dan gəlir." },
-      { "question": "Function binding nədir?", "answer": "`bind` funksiyası `this` kontekstini daimi bir obyektə bağlayır." },
-      { "question": "Call və Apply fərqi nədir?", "answer": "`call` arqumentləri vergüllə, `apply` isə massivlə qəbul edir." },
-      { "question": "Function Hoisting necə işləyir?", "answer": "Function declaration yuxarıya qaldırılır və əvvəl çağırıla bilər." },
-      { "question": "Function Expression niyə hoist edilmir?", "answer": "Çünki o, dəyişənə təyin edilir və dəyişən `undefined` olur." },
-      { "question": "Closuredə dəyişənlər necə saxlanılır?", "answer": "Lexical scope-da bağlanır və funksiya bağlanandan sonra belə saxlanılır." },
-      { "question": "Callback Hell nədir?", "answer": "Bir-birinin içində çoxlu callback-lərin yazılması nəticəsində kodun oxunmaz olması." },
-      { "question": "Promise nə üçündür?", "answer": "Asinxron əməliyyatların idarə olunması üçün istifadə olunur." },
-      { "question": "Async/Await necə işləyir?", "answer": "Promise-ləri oxunaqlı formada idarə etməyə imkan verir." },
-      { "question": "Event Loop nədir?", "answer": "JavaScript-in asinxron əməliyyatları idarə edən mexanizmidir." },
-      { "question": "SetTimeout və SetInterval fərqi nədir?", "answer": "`setTimeout` bir dəfə, `setInterval` təkrarlanan əməliyyat üçün istifadə olunur." },
-      { "question": "Debounce nədir?", "answer": "Bir funksiyanın çox tez-tez çağırılmasının qarşısını alır, son çağırışdan sonra işə düşür." },
-      { "question": "Throttle nədir?", "answer": "Bir funksiyanın müəyyən intervalla çağırılmasına icazə verir." },
-      { "question": "Callback funksiyalar harda istifadə olunur?", "answer": "Event handling, setTimeout, API çağırışları və async əməliyyatlarda." },
-      { "question": "Pure və Impure function fərqi nədir?", "answer": "Pure dəyişənlərə təsir etmir, impure təsir edir." },
-      { "question": "Function arguments obyektidirmi?", "answer": "Bəli, array-ə bənzər obyekt kimi mövcuddur." },
-      { "question": "`new Function()` necə işləyir?", "answer": "Stringdən dinamik funksiya yaradır." },
-      { "question": "Arrow function `arguments` obyektinə malikdirmi?", "answer": "Xeyr, arrow function-da `arguments` yoxdur." },
-      { "question": "Function default values ES6-da necə yazılır?", "answer": "Parametrə dəyər bərabərliklə verilir, məsələn `(a=5)=>{}`" },
-      { "question": "Nested function nədir?", "answer": "Bir funksiyanın içərisində başqa funksiya yaratmaqdır." },
-      { "question": "JavaScript funksiyaları obyekt sayılırmı?", "answer": "Bəli, onlar obyekt tipindədir və property-ləri ola bilər." },
-      { "question": "Arrow function-da `prototype` varmı?", "answer": "Xeyr, arrow funksiyaların `prototype` property-si yoxdur." },
-      { "question": "Immediately executed arrow function necə yazılır?", "answer": "(() => { console.log('run'); })();" },
-      { "question": "Function chaining nədir?", "answer": "Funksiya ardıcıllığı ilə obyekt metodlarını bir-birinə bağlama texnikasıdır." },
-      { "question": "Callback funksiyalarının problemi nədir?", "answer": "Nested strukturlar yaradır və kodun saxlanmasını çətinləşdirir." },
-      { "question": "Async await error handling necə aparılır?", "answer": "`try...catch` bloku ilə səhv idarə olunur." },
-      { "question": "Generator funksiyalar nədir?", "answer": "Generator funksiyalar `function*` ilə yaradılır və `yield` açar sözü ilə nəticələri addım-addım qaytarır." },
-      { "question": "Iterator nədir və necə işləyir?", "answer": "Iterator obyektlərdə ardıcıl olaraq elementlərə giriş etməyə imkan verən interfeysdir (`next()` metodu ilə işləyir)." },
-      { "question": "Callback Hell problemini necə həll edirik?", "answer": "Promise və async/await istifadə edərək callback hell problemini aradan qaldırmaq olar." },
-      { "question": "Promise.all və Promise.race fərqi nədir?", "answer": "`Promise.all` bütün promise-lərin nəticəsini qaytarır, `Promise.race` isə birincisi tamamlanan promise-in nəticəsini." },
-      { "question": "Event bubbling və capturing nədir?", "answer": "Event bubbling hadisələrin DOM ağacında yuxarı doğru, capturing isə aşağı doğru ötürülməsidir." },
-      { "question": "Context nədir və necə dəyişir?", "answer": "Context funksiyanın çağırıldığı obyektə əsasən `this`-in dəyəridir. `bind`, `call`, `apply` ilə dəyişmək mümkündür." },
-      { "question": "Immediately Invoked Arrow Function necə yazılır?", "answer": "(() => { console.log('Run'); })();" },
-      { "question": "Factory Function nədir?", "answer": "Factory function obyekt yaradan və qaytaran funksiyadır, `new` açar sözü olmadan işləyir." },
-      { "question": "Constructor Function nədir?", "answer": "`new` ilə çağırılan və obyektin instansını yaradan funksiyadır." },
-      { "question": "Prototype nədir və nəyə lazımdır?", "answer": "Prototype obyektlərə miras (inheritance) xüsusiyyəti verir, hər obyekt `__proto__` ilə əlaqəlidir." },
-      { "question": "Arrow function ilə constructor niyə mümkün deyil?", "answer": "Çünki arrow function-ların `prototype`-u yoxdur və `this`-i sabitdir." },
-      { "question": "Immediately Invoked Function nə üçün istifadə olunur?", "answer": "Global namespace-in çirklənməsinin qarşısını almaq üçün." },
-      { "question": "Module Pattern nədir?", "answer": "Kodun parçalanmasını və dəyişənlərin gizlədilməsini təmin edən dizayn pattern-dir." },
-      { "question": "Singleton pattern nədir?", "answer": "Bir obyektin yalnız bir instansının yaradılmasını təmin edən pattern-dir." },
-      { "question": "Memoization nədir?", "answer": "Eyni arqumentlərlə çağırıldıqda nəticəni yadda saxlayaraq performansı artıran texnikadır." },
-      { "question": "Currying nə işə yarayır?", "answer": "Funksiyanı tək parametrli funksiyalara bölərək kodu daha çevik edir." },
-      { "question": "Pure function-ların üstünlüyü nədir?", "answer": "Test edilə bilən, təkrarlana bilən və yan təsirsiz kod yazmağa imkan verir." },
-      { "question": "Asinxron və sinxron funksiyalar fərqi nədir?", "answer": "Sinxron funksiyalar ardıcıl icra olunur, asinxronlar isə `event loop` vasitəsilə sonraya buraxılır." },
-      { "question": "Promise chaining necə işləyir?", "answer": "Bir promise-in nəticəsi digər `then()`-ə ötürülür." },
-      { "question": "Async function hər zaman nə qaytarır?", "answer": "Async funksiyalar həmişə Promise qaytarır." },
-      { "question": "JSON.stringify və JSON.parse nə üçündür?", "answer": "Obyekti stringə çevirmək və ya stringi obyektə çevirmək üçün istifadə olunur." },
-      { "question": "Deep copy və shallow copy fərqi nədir?", "answer": "Shallow copy bir səviyyəlik kopyadır, deep copy isə bütün səviyyələri kopyalayır." },
-      { "question": "Spread operator və Object.assign fərqi nədir?", "answer": "Spread ES6 sintaksisidir, Object.assign daha köhnə üsuldur; hər ikisi obyekt birləşdirmək üçündür." },
-      { "question": "Destructuring nədir?", "answer": "Array və obyektlərdən məlumat çıxarmaq üçün qısa sintaksisdir." },
-      { "question": "Immediately Invoked Generator necə çağırılır?", "answer": "(function* () { yield 1; })().next();" },
-      { "question": "Hoisting-in riskləri nədir?", "answer": "Dəyişənlərin `undefined` olması və gözlənilməz davranışlara səbəb ola bilməsidir." },
-      { "question": "Callback error-first pattern nədir?", "answer": "Node.js-də ənənəvi callback-lərin ilk arqumenti error olur (`callback(err, data)`)." },
-      { "question": "Promise.resolve və Promise.reject nə edir?", "answer": "Promise-ləri əl ilə uğurlu və ya uğursuz vəziyyətə gətirir." },
-      { "question": "Promise.finally nə edir?", "answer": "Uğur və ya səhv halından asılı olmayaraq hər zaman işləyir." },
-      { "question": "Event delegation nədir?", "answer": "Hadisəni valideynə qoşaraq bütün övlad elementləri üçün idarə etmək üsuludur." },
-      { "question": "Async Iterator nədir?", "answer": "Asinxron məlumat ardıcıllığını `for await...of` ilə iterasiya etməyə imkan verir." },
-      { "question": "Temporal Dead Zone nədir?", "answer": "`let` və `const` dəyişənləri təyin olunmadan istifadə edilən mərhələdir." },
-      { "question": "Function parameter destructuring necə edilir?", "answer": "Parametr olaraq obyekt və ya array parçalanaraq qəbul edilir, məsələn `function fn({a,b}){}`" },
-      { "question": "Dynamic import nədir?", "answer": "Modulu asinxron şəkildə yükləməyə imkan verir (`import('module.js')`)." },
-      { "question": "Module export və default export fərqi nədir?", "answer": "Bir modulda bir default export, amma çox sayda named export ola bilər." },
-      { "question": "Revealing module pattern nədir?", "answer": "Funksiyalar və dəyişənləri yalnız qaytarılan obyekt vasitəsilə əlçatan etmək üsuludur." },
-      { "question": "Event loop-un stack və queue fərqi nədir?", "answer": "Stack sinxron kodu, queue isə callback və promise-ləri saxlayır." },
-      { "question": "Microtask və macrotask fərqi nədir?", "answer": "Microtask (promise) queue prioritetlidir, macrotask (timeout) isə sonra işlənir." },
-      { "question": "Scope chain nədir?", "answer": "Daxili funksiyanın xarici scope-lara ardıcıl baxış mexanizmidir." },
-      { "question": "Block scope ilə function scope fərqi nədir?", "answer": "`let` və `const` block-a, `var` isə funksiyaya bağlıdır." },
-      { "question": "Arrow function 'arguments' obyektini niyə dəstəkləmir?", "answer": "Çünki arrow function-ın öz `arguments` konteksti yoxdur." },
-      { "question": "Bind metodunun istifadəsi nə vaxt lazımdır?", "answer": "`this` konteksti itiriləndə (məsələn event listener-də) istifadə olunur." },
-      { "question": "Function memoization harada istifadə olunur?", "answer": "Məsələn, API nəticələrinin və ya hesablamaların cache edilməsi üçün." },
-      { "question": "Function decorator nədir?", "answer": "Mövcud funksiyanın davranışını dəyişmədən üzərinə əlavə xüsusiyyətlər əlavə edən funksiya." },
-      { "question": "Partial application nədir?", "answer": "Funksiya arqumentlərinin bir hissəsini əvvəlcədən doldurmaq üsuludur." },
-      { "question": "Callback-lər Promise-lərlə necə əvəz olunur?", "answer": "Callback funksiyalar əvəzinə Promise return edən funksiyalar yazılır." },
-      { "question": "Lazy evaluation nədir?", "answer": "Dəyərin yalnız lazım olduqda hesablanması üsuludur." },
-      { "question": "Immediately invoked async function necə yazılır?", "answer": "(async()=>{await someTask();})();" }
+      {
+        "question": "JavaScript-də funksiya nədir?",
+        "answer": "Funksiya, müəyyən bir tapşırığı yerinə yetirmək və ya bir dəyər hesablamaq üçün nəzərdə tutulmuş, təkrar istifadə edilə bilən kod blokudur. Funksiyalar kodu daha modulyar, oxunaqlı və idarəolunan edir. \n\n`function salamVer() {\n  console.log(\"Salam, Dünya!\");\n}\n\nsalamVer(); // Funksiyanı çağırırıq`"
+      },
+      {
+        "question": "`function declaration` və `function expression` arasındakı fərq nədir?",
+        "answer": "Əsas fərq **hoisting** (yuxarı qaldırılma) hadisəsidir.\n- **Function Declaration**: Kod icra olunmazdan əvvəl bütün funksiya yaddaşa yüklənir. Bu o deməkdir ki, funksiyanı təyin etdiyiniz yerdən əvvəl də çağıra bilərsiniz.\n- **Function Expression**: Dəyişənə mənimsədilən funksiyadır və yalnız təyin olunduqdan sonra çağırıla bilər.\n\n`// Function Declaration (Hoisting işləyir)\nconsole.log(declarationFunc()); // \"Declaration işlədi\"\n\nfunction declarationFunc() {\n  return \"Declaration işlədi\";\n}\n\n// Function Expression (Hoisting işləmir)\n// console.log(expressionFunc()); // TypeError: expressionFunc is not a function\n\nconst expressionFunc = function() {\n  return \"Expression işlədi\";\n};\n\nconsole.log(expressionFunc()); // \"Expression işlədi\"`"
+      },
+      {
+        "question": "Arrow Function nədir?",
+        "answer": "Arrow function (ox funksiyası) ES6 ilə gələn, daha qısa sintaksisə malik funksiya yazılışıdır. Onun ən vacib xüsusiyyəti isə öz `this` kontekstinə sahib olmamasıdır; `this` dəyərini yaradıldığı (lexical) scope-dan götürür.\n\n`// Adi funksiya\nconst toplaNormal = function(a, b) {\n  return a + b;\n};\n\n// Arrow funksiya\nconst toplaArrow = (a, b) => a + b;\n\nconsole.log(toplaArrow(5, 3)); // Çıxış: 8`"
+      },
+      {
+        "question": "`scope` nədir?",
+        "answer": "`Scope` (əhatə dairəsi), kodunuzda dəyişənlərin, funksiyaların və obyektlərin əlçatan olduğu kontekstdir. JavaScript-də Global, Function, və Block scope növləri var.\n\n`let globalVar = \"Global\"; // Global Scope\n\nfunction testScope() {\n  var functionVar = \"Function\"; // Function Scope\n  if (true) {\n    let blockVar = \"Block\"; // Block Scope\n    console.log(globalVar, functionVar, blockVar);\n  }\n  // console.log(blockVar); // Xəta: blockVar is not defined\n}\n\ntestScope();`"
+      },
+      {
+        "question": "`closure` nədir?",
+        "answer": "`Closure` (qapanma), bir funksiyanın öz leksik mühiti (lexical scope) ilə birlikdə 'xatırlanmasıdır'. Bu, bir funksiyanın öz yaradıldığı scope-dakı dəyişənlərə, həmin scope-dan kənarda çağırılsa belə, giriş əldə edə bilməsini təmin edir.\n\n`function saygacYarat() {\n  let say = 0;\n\n  return function() {\n    say++;\n    return say;\n  };\n}\n\nconst menimSaygacim = saygacYarat();\nconsole.log(menimSaygacim()); // 1\nconsole.log(menimSaygacim()); // 2`"
+      },
+      {
+        "question": "`this` necə işləyir?",
+        "answer": "`this` açar sözü, funksiyanın çağırıldığı konteksti (obyekti) ifadə edir. Dəyəri funksiyanın necə çağırıldığına görə dəyişir: obyekt metodu, sadə funksiya, `call`/`apply`/`bind` və ya arrow function olmasına görə fərqlənir.\n\n`const user = {\n  name: \"Ali\",\n  greet: function() {\n    console.log(`Salam, mən ${this.name}`); // 'this' burada 'user' obyektidir\n  },\n  farewell: () => {\n    // 'this' burada yuxarıdakı scope-dan (global) gəlir\n    console.log(`Görüşərik, ${this.name}`);\n  }\n};\n\nuser.greet();    // Salam, mən Ali\nuser.farewell(); // Görüşərik, undefined`"
+      },
+      {
+        "question": "IIFE nədir?",
+        "answer": "IIFE (Immediately Invoked Function Expression) – təyin olunduğu anda dərhal çağırılan funksiya ifadəsidir. Əsas məqsədi, qlobal scope-u çirkləndirmədən təcrid olunmuş bir icra mühiti yaratmaqdır.\n\n`(function() {\n  var gizliDeyishen = \"Bu dəyişən qlobal deyil\";\n  console.log(\"IIFE dərhal işə düşdü!\");\n  console.log(gizliDeyishen);\n})();\n\n// console.log(gizliDeyishen); // Xəta: gizliDeyishen is not defined`"
+      },
+      {
+        "question": "Callback funksiyası nədir?",
+        "answer": "`Callback` (geri çağırış), başqa bir funksiyaya arqument kimi ötürülən və həmin funksiyanın daxilində müəyyən bir əməliyyat bitdikdən sonra çağırılan funksiyadır. Asinxron əməliyyatlarda geniş istifadə olunur.\n\n`function hesabla(a, b, callback) {\n  const cem = a + b;\n  callback(cem);\n}\n\nfunction neticeniGoster(netice) {\n  console.log(\"Nəticə: \" + netice);\n}\n\nhesabla(10, 5, neticeniGoster); // Çıxış: Nəticə: 15`"
+      },
+      {
+        "question": "`Pure Function` nədir?",
+        "answer": "`Pure Function` (təmiz funksiya) iki əsas qaydaya riayət edir:\n1. Eyni giriş (arqumentlər) üçün həmişə eyni nəticəni qaytarır.\n2. Yan təsiri yoxdur (No Side Effects) - funksiya öz scope-undan kənarda heç bir dəyişiklik etmir.\n\n`// Pure Function\nfunction topla(a, b) {\n  return a + b;\n}\n\n// Impure Function (yan təsiri var)\nlet cem = 0;\nfunction toplaVeYaz(a, b) {\n  cem = a + b; // Kənar dəyişəni dəyişdirir (side effect)\n  return cem;\n}`"
+      },
+      {
+        "question": "`var`, `let`, `const` fərqi nədir?",
+        "answer": "- `var`: Function scope-ludur və hoist edilir.\n- `let`: Block scope-ludur (`{}`) və dəyəri dəyişdirilə bilər.\n- `const`: Block scope-ludur və dəyəri dəyişdirilə bilməz (sabitdir).\n\n`function testVarLetConst() {\n  var a = 1;\n  let b = 1;\n  if (true) {\n    var a = 2; // Yuxarıdakı 'a'-nı dəyişir\n    let b = 2; // Yeni, blok-scope-lu 'b' yaradır\n    console.log(\"Blok daxili a:\", a); // 2\n    console.log(\"Blok daxili b:\", b); // 2\n  }\n  console.log(\"Blok xarici a:\", a); // 2\n  console.log(\"Blok xarici b:\", b); // 1\n}\ntestVarLetConst();`"
+      },
+      {
+        "question": "Hoisting nədir?",
+        "answer": "Hoisting, JavaScript-də dəyişən və funksiya təriflərinin kod icra olunmazdan əvvəl öz scope-larının başına 'qaldırılması' hadisəsidir. `function declaration`-lar tam olaraq, `var` ilə təyin olunan dəyişənlər isə yalnız adları (`undefined` olaraq) hoist edilir.\n\n`console.log(x); // undefined (var x hoist edilib)\nvar x = 5;\n\nhello(); // \"Salam\" (funksiya tam hoist edilib)\nfunction hello() {\n  console.log(\"Salam\");\n}`"
+      },
+      {
+        "question": "Block Scope nədir?",
+        "answer": "`{}` mötərizələri arasında qalan əhatə dairəsidir. `let` və `const` ilə təyin olunan dəyişənlər yalnız təyin olunduqları blok daxilində əlçatandır.\n\n`if (true) {\n  let blockScopedVar = \"Mən yalnız bu blokdayam\";\n  console.log(blockScopedVar); // \"Mən yalnız bu blokdayam\"\n}\n// console.log(blockScopedVar); // ReferenceError: blockScopedVar is not defined`"
+      },
+      {
+        "question": "Function Scope nədir?",
+        "answer": "Bir funksiyanın daxilində təyin olunan dəyişənlərin yalnız həmin funksiya daxilində görünməsidir. `var` ilə təyin olunan dəyişənlər bu scope-a aiddir.\n\n`function myFunction() {\n  var functionScopedVar = \"Mən yalnız bu funksiyadayam\";\n  console.log(functionScopedVar);\n}\nmyFunction();\n// console.log(functionScopedVar); // ReferenceError: functionScopedVar is not defined`"
+      },
+      {
+        "question": "Lexical Scope nədir?",
+        "answer": "Bir funksiyanın öz yaradıldığı yerdəki (leksik mühitdəki) dəyişənlərə giriş imkanının olmasıdır. Bu, funksiyanın harada çağırılmasından asılı deyil, harada yazılmasından asılıdır. Closure-ların yaranmasının əsas səbəbi budur.\n\n`let x = 10;\nfunction outer() {\n  function inner() {\n    console.log(x); // inner, outer-in yox, outer isə global scope-dakı x-i tapır\n  }\n  inner();\n}\nouter(); // Çıxış: 10`"
+      },
+      {
+        "question": "High Order Function nədir?",
+        "answer": "Başqa bir funksiyanı arqument kimi qəbul edən və/və ya nəticə olaraq funksiya qaytaran funksiyadır. `map`, `filter`, `reduce` kimi metodlar high-order funksiyalardır.\n\n`const numbers = [1, 2, 3, 4];\n// 'map' bir HOF-dur, çünki arqument olaraq başqa bir funksiya (callback) qəbul edir.\nconst doubled = numbers.map(num => num * 2);\nconsole.log(doubled); // [2, 4, 6, 8]`"
+      },
+      {
+        "question": "Currying nədir?",
+        "answer": "Birdən çox arqumenti olan bir funksiyanı, hər biri tək arqument qəbul edən ardıcıl funksiyalara bölmək texnikasıdır. Bu, funksiyaları daha çevik və təkrar istifadə edilə bilən edir.\n\n`// Curried funksiya\nconst curriedTopla = (a) => (b) => (c) => a + b + c;\n\nconst add5 = curriedTopla(5); // a=5 olaraq yeni funksiya yaradır\nconst add5and3 = add5(3);    // b=3 olaraq yeni funksiya yaradır\n\nconsole.log(add5and3(2)); // c=2 verilir və nəticə hesablanır. Çıxış: 10`"
+      },
+      {
+        "question": "Function Composition nədir?",
+        "answer": "Birdən çox funksiyanın nəticəsini bir-birinə ötürərək yeni, daha mürəkkəb bir funksiya yaratmaqdır. Bir funksiyanın çıxışı digərinin girişi olur.\n\n`const topla = (x) => x + 5;\nconst vur = (x) => x * 2;\n\n// Composition\nconst compose = (f, g) => (x) => f(g(x));\n\nconst toplayibVuranFunksiya = compose(vur, topla);\n\nconsole.log(toplayibVuranFunksiya(10)); // (10 + 5) * 2 = 30`"
+      },
+      {
+        "question": "Immediately Invoked Function Expression nə işə yarayır?",
+        "answer": "IIFE-nin əsas məqsədi qlobal scope-u çirkləndirmədən (polluting) lokal, təcrid olunmuş bir icra mühiti yaratmaqdır. Bu, kitabxana və freymvorklarda dəyişən adlarının toqquşmasının qarşısını almaq üçün çox istifadə olunur.\n\n`(function() {\n  // Bu blokdakı hər şey lokal qalır\n  let localData = \"Bu data qlobal deyil\";\n  console.log(localData);\n})();`"
+      },
+      {
+        "question": "Recursion nədir?",
+        "answer": "Rekursiya, bir funksiyanın özünü birbaşa və ya dolayısı ilə çağırmasıdır. Mürəkkəb problemləri daha kiçik, təkrarlanan alt problemlərə bölmək üçün istifadə olunur. Mütləq bir dayandırma şərti (base case) olmalıdır, əks halda sonsuz dövrə girər.\n\n`function factorial(n) {\n  // Dayandırma şərti\n  if (n <= 1) {\n    return 1;\n  }\n  // Rekursiv çağırış\n  return n * factorial(n - 1);\n}\n\nconsole.log(factorial(5)); // 120`"
+      },
+      {
+        "question": "Tail Recursion nədir?",
+        "answer": "Tail recursion, rekursiv çağırışın funksiyanın ən son əməliyyatı olduğu xüsusi bir rekursiya növüdür. Bəzi proqramlaşdırma dilləri və mühitləri (məsələn, ES6 strict mode) bu halı optimallaşdıraraq stack overflow xətasının qarşısını ala bilir (Tail Call Optimization - TCO).\n\n`function factorialTail(n, accumulator = 1) {\n  if (n === 0) {\n    return accumulator;\n  }\n  // Rekursiv çağırış ən son əməliyyatdır\n  return factorialTail(n - 1, n * accumulator);\n}\nconsole.log(factorialTail(5)); // 120`"
+      },
+      {
+        "question": "Anonymous Function nədir?",
+        "answer": "Adı olmayan funksiyadır. Adətən bir dəyişənə mənimsədilir (function expression) və ya callback olaraq birbaşa başqa funksiyaya ötürülür.\n\n`const greet = function() {\n  console.log(\"Bu anonim funksiyadır.\");\n};\n\ngreet();\n\nsetTimeout(function() {\n  console.log(\"Bu da callback kimi istifadə olunan anonim funksiyadır.\");\n}, 1000);`"
+      },
+      {
+        "question": "Default parameter nədir?",
+        "answer": "Funksiya parametrinə, ona heç bir arqument ötürülmədikdə və ya `undefined` ötürüldükdə avtomatik olaraq təyin olunacaq standart (default) dəyərdir.\n\n`function salamla(ad = \"qonaq\") {\n  console.log(`Salam, ${ad}!`);\n}\n\nsalamla(\"Farhad\"); // Salam, Farhad!\nsalamla();        // Salam, qonaq!`"
+      },
+      {
+        "question": "Rest parameter nədir?",
+        "answer": "Rest parametri (`...`), funksiyaya ötürülən qeyri-müəyyən sayda arqumenti bir massiv (array) kimi toplamağa imkan verir. Həmişə funksiya parametrlərinin sonunda olmalıdır.\n\n`function cem(...reqemler) {\n  // 'reqemler' bir massivdir\n  return reqemler.reduce((toplam, reqem) => toplam + reqem, 0);\n}\n\nconsole.log(cem(1, 2, 3));       // 6\nconsole.log(cem(10, 20, 30, 40)); // 100`"
+      },
+      {
+        "question": "Spread operator nə edir?",
+        "answer": "Spread operatoru (`...`), array və ya obyekt kimi təkrarlana bilən (iterable) strukturları genişləndirərək fərdi elementlərə ayırır. Array-ləri birləşdirmək, obyektləri kopyalamaq/birləşdirmək və funksiyaya arqumentləri ötürmək üçün istifadə olunur.\n\n`const arr1 = [1, 2];\nconst arr2 = [3, 4];\nconst combinedArr = [...arr1, ...arr2]; // [1, 2, 3, 4]\n\nconst obj1 = { a: 1, b: 2 };\nconst obj2 = { ...obj1, c: 3 }; // { a: 1, b: 2, c: 3 }`"
+      },
+      {
+        "question": "Arrow function-da `this` necə davranır?",
+        "answer": "Arrow function-da `this` leksik olaraq bağlanır (lexically bound). Bu o deməkdir ki, arrow function-ın öz `this` konteksti yoxdur, o, `this`-in dəyərini yaradıldığı (əhatə edən) funksiyanın və ya scope-un `this` dəyərindən götürür.\n\n`function Timer() {\n  this.seconds = 0;\n  setInterval(() => {\n    // 'this' Timer obyektinə aiddir, çünki arrow function istifadə olunub.\n    this.seconds++;\n    console.log(this.seconds);\n  }, 1000);\n}\n\nconst myTimer = new Timer();`"
+      },
+      {
+        "question": "Function binding nədir?",
+        "answer": "`bind()` metodu, bir funksiyanın `this` kontekstini daimi olaraq müəyyən bir obyektə bağlayaraq yeni bir funksiya yaradır. Bu yeni funksiya çağırıldıqda, `this` həmişə `bind` ilə təyin edilmiş obyekt olur.\n\n`const user = { name: 'Ayan' };\nfunction showName() {\n  console.log(this.name);\n}\n\nconst boundShowName = showName.bind(user);\nboundShowName(); // Çıxış: Ayan`"
+      },
+      {
+        "question": "Call və Apply fərqi nədir?",
+        "answer": "Həm `call()`, həm də `apply()` bir funksiyanı müəyyən bir `this` konteksti ilə dərhal çağırmaq üçündür. Əsas fərq arqumentlərin ötürülməsi üsulundadır:\n- `call(thisArg, arg1, arg2, ...)` arqumentləri ayrı-ayrılıqda, vergüllə qəbul edir.\n- `apply(thisArg, [arg1, arg2, ...])` arqumentləri bir massiv (array) içində qəbul edir.\n\n`function greet(salam, isare) {\n  console.log(`${salam}, ${this.name}${isare}`);\n}\n\nconst person = { name: 'Leyla' };\n\ngreet.call(person, 'Hello', '!');   // Hello, Leyla!\ngreet.apply(person, ['Hi', '!!']); // Hi, Leyla!!`"
+      },
+      {
+        "question": "Function Hoisting necə işləyir?",
+        "answer": "JavaScript mühərriki kodu icra etməzdən əvvəl `function declaration` ilə yazılmış funksiyaları tam şəkildə (adı və gövdəsi) yaddaşa yükləyir. Bu səbəbdən, belə funksiyaları təyin olunmamışdan əvvəl də çağırmaq mümkündür.\n\n`hoistedFunction(); // \"Mən yuxarı qaldırıldım!\"\n\nfunction hoistedFunction() {\n  console.log(\"Mən yuxarı qaldırıldım!\");\n}`"
+      },
+      {
+        "question": "Function Expression niyə hoist edilmir?",
+        "answer": "Çünki function expression bir dəyişənə mənimsədilir. `var` ilə təyin edildikdə, dəyişənin adı hoist edilir, amma dəyəri təyin olunana qədər `undefined` olur. Funksiya olmayan `undefined`-ı çağırmaq isə `TypeError` verir. `let` və `const` isə ümumiyyətlə hoist edilmir (Temporal Dead Zone).\n\n`// console.log(notHoisted()); // TypeError: notHoisted is not a function\n\nvar notHoisted = function() {\n  console.log(\"Mən hoist edilmədim.\");\n};`"
+      },
+      {
+        "question": "Closuredə dəyişənlər necə saxlanılır?",
+        "answer": "Bir funksiya yaradıldıqda, o, öz leksik scope-una (yaradıldığı mühitdəki dəyişənlərə) bir referans (bağlantı) saxlayır. Bu funksiya xarici scope-dan qaytarıldıqda və ya istifadə edildikdə, həmin referans vasitəsilə dəyişənlər yaddaşda qalmağa davam edir (garbage collection tərəfindən silinmir), çünki hələ də onlara ehtiyac var.\n\n`function createAdder(x) {\n  // x dəyişəni daxili funksiyanın closure-unda saxlanılır\n  return function(y) {\n    return x + y;\n  };\n}\nconst add5 = createAdder(5);\nconsole.log(add5(10)); // 15`"
+      },
+      {
+        "question": "Callback Hell nədir?",
+        "answer": "Callback Hell (həmçinin 'Pyramid of Doom' adlanır), asinxron əməliyyatların bir-birinin içində, iç-içə callback funksiyaları şəklində yazılması nəticəsində yaranan oxunmaz və çətin idarə olunan kod strukturudur.\n\n`asyncOp1(function(result1) {\n  asyncOp2(result1, function(result2) {\n    asyncOp3(result2, function(result3) {\n      // və s. dərinləşməyə davam edir...\n    });\n  });\n});`"
+      },
+      {
+        "question": "Promise nə üçündür?",
+        "answer": "`Promise` asinxron əməliyyatın gələcəkdəki nəticəsini (uğurlu başa çatma və ya uğursuzluq) təmsil edən bir obyektdir. O, 'Callback Hell' problemini həll etmək və asinxron kodu daha zəncirvari (chainable) və oxunaqlı şəkildə idarə etmək üçün istifadə olunur.\n\n`const myPromise = new Promise((resolve, reject) => {\n  let success = true;\n  if (success) {\n    resolve(\"Əməliyyat uğurludur!\");\n  } else {\n    reject(\"Xəta baş verdi!\");\n  }\n});\n\nmyPromise\n  .then(result => console.log(result)) // Uğurlu hal\n  .catch(error => console.log(error));   // Uğursuz hal`"
+      },
+      {
+        "question": "Async/Await necə işləyir?",
+        "answer": "`async/await` sintaksisi, Promise-lər üzərində qurulmuş və asinxron kodu sinxron kimi oxunaqlı yazmağa imkan verən bir xüsusiyyətdir. `async` ilə işarələnmiş funksiya həmişə bir Promise qaytarır. `await` açar sözü isə yalnız `async` funksiyalar daxilində istifadə edilə bilər və bir Promise-in nəticəsini gözləyir.\n\n`async function fetchData() {\n  try {\n    const response = await fetch('https://api.example.com/data');\n    const data = await response.json();\n    console.log(data);\n  } catch (error) {\n    console.error(\"Məlumatları alarkən xəta: \", error);\n  }\n}\n\nfetchData();`"
+      },
+      {
+        "question": "Event Loop nədir?",
+        "answer": "Event Loop, JavaScript-in tək-axınlı (single-threaded) olmasına baxmayaraq asinxron əməliyyatları (non-blocking I/O) idarə etməsini təmin edən mexanizmdir. O, Call Stack, Callback Queue (Task Queue) və Microtask Queue arasında koordinasiya yaradır. Call Stack boş olduqda, Event Loop növbədəki tapşırığı (callback, promise) Stack-ə ötürür və icra etdirir.\n\n`console.log('Start');\n\nsetTimeout(() => {\n  console.log('Timeout callback'); // Macrotask (Callback Queue)\n}, 0);\n\nPromise.resolve().then(() => {\n  console.log('Promise resolved'); // Microtask\n});\n\nconsole.log('End');\n\n// Çıxış:\n// Start\n// End\n// Promise resolved (Microtask prioritetlidir)\n// Timeout callback (Macrotask sonra)`"
+      },
+      {
+        "question": "SetTimeout və SetInterval fərqi nədir?",
+        "answer": "Hər ikisi də asinxron taymer funksiyalarıdır, lakin fərqli məqsədlər üçün istifadə olunurlar:\n- `setTimeout(callback, delay)`: Verilmiş `delay` (millisaniyə) müddətindən sonra `callback` funksiyasını **yalnız bir dəfə** icra edir.\n- `setInterval(callback, delay)`: Verilmiş `delay` müddətindən bir `callback` funksiyasını **davamlı olaraq, təkrarlanan** şəkildə icra edir.\n\n`// 2 saniyə sonra bir dəfə işləyəcək\nsetTimeout(() => console.log('Timeout!'), 2000);\n\n// Hər 1 saniyədən bir təkrarlanacaq\nlet intervalId = setInterval(() => console.log('Interval!'), 1000);\n\n// İntervalı dayandırmaq üçün\nsetTimeout(() => clearInterval(intervalId), 3500);`"
+      },
+      {
+        "question": "Debounce nədir?",
+        "answer": "Debounce, bir funksiyanın ardıcıl və çox sürətli çağırışlarının qarşısını alan bir texnikadır. O, funksiyanın icrasını gecikdirir və yalnız son çağırışdan müəyyən bir müddət keçdikdən sonra funksiyanı işə salır. Bu, axtarış sahələrində (search input) və ya pəncərə ölçüsünü dəyişdirmə (resize) hadisələrində performansı artırmaq üçün istifadə olunur.\n\n`function debounce(func, delay) {\n  let timeoutId;\n  return function(...args) {\n    clearTimeout(timeoutId);\n    timeoutId = setTimeout(() => {\n      func.apply(this, args);\n    }, delay);\n  };\n}\n\nconst handleInput = (event) => {\n  console.log('Axtarış:', event.target.value);\n};\n\nconst debouncedHandleInput = debounce(handleInput, 500);\ndocument.getElementById('searchInput').addEventListener('input', debouncedHandleInput);`"
+      },
+      {
+        "question": "Throttle nədir?",
+        "answer": "Throttle, bir funksiyanın müəyyən bir zaman intervalında yalnız bir dəfə çağırılmasına icazə verən bir texnikadır. Debounce-dan fərqli olaraq, funksiya çağırışlarını ləğv etmir, sadəcə icra tezliyini məhdudlaşdırır. Bu, scroll və ya mouse hərəkəti kimi davamlı hadisələri idarə etmək üçün faydalıdır.\n\n`function throttle(func, limit) {\n  let inThrottle;\n  return function(...args) {\n    if (!inThrottle) {\n      func.apply(this, args);\n      inThrottle = true;\n      setTimeout(() => inThrottle = false, limit);\n    }\n  };\n}\n\nconst onScroll = () => console.log('Scroll hadisəsi!');\nwindow.addEventListener('scroll', throttle(onScroll, 200));`"
+      },
+      {
+        "question": "Callback funksiyalar harda istifadə olunur?",
+        "answer": "Callback funksiyaları əsasən asinxron əməliyyatlarda və hadisəyə əsaslanan proqramlaşdırmada istifadə olunur. Əsas istifadə yerləri:\n- **Asinxron API çağırışları:** `fetch()` (əvvəllər `XMLHttpRequest`).\n- **Taymerlər:** `setTimeout()`, `setInterval()`.\n- **Hadisə dinləyiciləri (Event Listeners):** `element.addEventListener('click', callback)`.\n- **Array metodları:** `map()`, `filter()`, `forEach()`.\n- **Node.js-də:** Fayl sistemi əməliyyatları (`fs.readFile(path, callback)`).\n\n`document.getElementById('myButton').addEventListener('click', function() {\n  console.log('Düyməyə klikləndi!');\n});`"
+      },
+      {
+        "question": "Pure və Impure function fərqi nədir?",
+        "answer": "- **Pure Function (Təmiz Funksiya):** Yan təsirləri yoxdur və eyni giriş üçün həmişə eyni nəticəni qaytarır. Kodun test edilməsini və proqnozlaşdırılmasını asanlaşdırır.\n- **Impure Function (Çirkli Funksiya):** Yan təsirləri var, yəni öz scope-undan kənarda bir vəziyyəti dəyişdirir (qlobal dəyişən, DOM, console, fayl sistemi) və ya eyni giriş üçün fərqli nəticələr qaytara bilər (`Math.random()`).\n\n`// Pure\nconst square = (x) => x * x;\n\n// Impure\nlet globalValue = 10;\nfunction addToGlobal(y) {\n  globalValue += y; // Yan təsir: qlobal dəyişəni dəyişdirir\n  return globalValue;\n}`"
+      },
+      {
+        "question": "Function arguments obyektidirmi?",
+        "answer": "Bəli, `arguments` funksiyanın daxilində əlçatan olan, ona ötürülmüş bütün arqumentləri saxlayan **array-ə bənzər** bir obyektdir. O, əsl massiv deyil, yəni `map`, `filter` kimi massiv metodlarına birbaşa malik deyil, lakin `length` xüsusiyyəti var və elementlərə indekslə müraciət etmək olur. Arrow function-larda `arguments` obyekti mövcud deyil.\n\n`function showArguments() {\n  console.log(arguments); // Arguments(3) [\"a\", \"b\", \"c\", callee: ƒ, Symbol(Symbol.iterator): ƒ]\n  console.log(arguments.length); // 3\n  console.log(arguments[0]); // \"a\"\n  // arguments.map is not a function\n}\n\nshowArguments('a', 'b', 'c');`"
+      },
+      {
+        "question": "`new Function()` necə işləyir?",
+        "answer": "`new Function()` konstruktoru, bir stringdən dinamik olaraq funksiya yaratmağa imkan verir. Bu, təhlükəsizlik və performans problemləri (qlobal scope-da işləyir və hər dəfə yenidən parse edilir) səbəbindən nadir hallarda istifadə olunur. `eval()`-a bənzər risklər daşıyır.\n\n`const sum = new Function('a', 'b', 'return a + b');\n\nconsole.log(sum(5, 10)); // 15`"
+      },
+      {
+        "question": "Arrow function `arguments` obyektinə malikdirmi?",
+        "answer": "Xeyr, arrow function-ların öz `arguments` obyekti yoxdur. Əgər arrow function daxilində `arguments`-ə müraciət etsəniz, o, əhatə edən (üst) adi funksiyanın `arguments` obyektini axtaracaq. Əgər müasir JavaScript (ES6+) istifadə edirsinizsə, `arguments` yerinə **rest parametri (`...args`)** istifadə etmək tövsiyə olunur.\n\n`const myArrowFunc = (...args) => {\n  // console.log(arguments); // ReferenceError: arguments is not defined\n  console.log(args); // args bir massivdir: [1, 2, 3]\n};\n\nmyArrowFunc(1, 2, 3);`"
+      },
+      {
+        "question": "Function default values ES6-da necə yazılır?",
+        "answer": "ES6-da funksiya parametrlərinə default dəyərlər birbaşa funksiya tərifində bərabərlik (`=`) işarəsi ilə verilir. Bu, kodun daha qısa və oxunaqlı olmasını təmin edir.\n\n`function create_user(username, theme = \"light\", level = 1) {\n  console.log(`User: ${username}, Theme: ${theme}, Level: ${level}`);\n}\n\ncreate_user(\"farhad\"); // User: farhad, Theme: light, Level: 1\ncreate_user(\"aydan\", \"dark\"); // User: aydan, Theme: dark, Level: 1`"
+      },
+      {
+        "question": "Nested function nədir?",
+        "answer": "Nested function (iç-içə funksiya), bir funksiyanın daxilində başqa bir funksiyanın təyin edilməsidir. Daxili funksiya yalnız xarici funksiyanın daxilindən əlçatandır və xarici funksiyanın dəyişənlərinə (closure vasitəsilə) giriş əldə edə bilir.\n\n`function outerFunction(x) {\n  function innerFunction(y) {\n    return x + y; // 'x' xarici funksiyanın dəyişənidir\n  }\n  return innerFunction(5);\n}\n\nconsole.log(outerFunction(10)); // 15`"
+      },
+      {
+        "question": "JavaScript funksiyaları obyekt sayılırmı?",
+        "answer": "Bəli, JavaScript-də funksiyalar birinci sinif obyektlərdir (first-class objects). Bu o deməkdir ki, onlar:\n- Dəyişənlərə mənimsədilə bilər.\n- Başqa funksiyalara arqument kimi ötürülə bilər.\n- Başqa funksiyalardan nəticə olaraq qaytarıla bilər.\n- Property və metodlara malik ola bilər.\n\n`function sayHello() {\n  console.log(\"Hello\");\n}\n\n// Funksiyaya property əlavə etmək\nsayHello.language = \"English\";\n\nconsole.log(sayHello.language); // \"English\"`"
+      },
+      {
+        "question": "Arrow function-da `prototype` varmı?",
+        "answer": "Xeyr, arrow funksiyaların `prototype` property-si yoxdur. Bu səbəbdən, onlar `new` açar sözü ilə konstruktor kimi istifadə edilə bilməzlər. Adi funksiyalar isə konstruktor kimi istifadə oluna bildikləri üçün `prototype`-a malikdirlər.\n\n`const MyArrow = () => {};\nfunction MyFunc() {}\n\nconsole.log(MyArrow.prototype); // undefined\nconsole.log(MyFunc.prototype);  // { constructor: f }`"
+      },
+      {
+        "question": "Immediately executed arrow function necə yazılır?",
+        "answer": "Immediately Invoked Arrow Function (IIAF) adi IIFE kimi yazılır, sadəcə `function` açar sözü yerinə arrow function sintaksisi istifadə olunur. Funksiya ifadəsi mötərizə içinə alınır və dərhal `()` ilə çağırılır.\n\n`(() => {\n  console.log('Immediately invoked arrow function işə düşdü!');\n})();`"
+      },
+      {
+        "question": "Function chaining nədir?",
+        "answer": "Function chaining (və ya method chaining), bir obyektin metodlarını ardıcıl olaraq bir-birinin ardınca çağırmaq texnikasıdır. Bu, hər metodun öz obyektinin instansını (`this`) qaytarması ilə mümkün olur. jQuery və bir çox digər kitabxanalarda geniş istifadə olunur.\n\n`class Calculator {\n  constructor(value = 0) {\n    this.value = value;\n  }\n  add(num) {\n    this.value += num;\n    return this; // 'this'i qaytararaq chaining imkanı yaradır\n  }\n  subtract(num) {\n    this.value -= num;\n    return this;\n  }\n}\n\nconst result = new Calculator(10).add(5).subtract(3);\nconsole.log(result.value); // 12`"
+      },
+      {
+        "question": "Callback funksiyalarının problemi nədir?",
+        "answer": "Callback-lərin əsas problemi **Callback Hell** (iç-içə yazılaraq oxunmaz kod yaratmaq) və **inversion of control** (nəzarətin inversiyası) - yəni kodumuzun icrasını üçüncü tərəf bir funksiyaya etibar etməyimizdir. Bu, xətaların idarə olunmasını və kodun ardıcıllığını anlamağı çətinləşdirir. `Promise` və `async/await` bu problemləri həll etmək üçün yaradılıb.\n\n`// Inversion of control: `loadData` funksiyasının bizim callback-i nə vaxt və necə çağıracağına nəzarət edə bilmirik.\nloadData('api/data', function(err, data) {\n  if(err) {\n    // handle error\n  }\n});`"
+      },
+      {
+        "question": "Async await error handling necə aparılır?",
+        "answer": "`async/await` ilə səhv idarəetməsi (error handling) sinxron koddakı kimi klassik `try...catch` bloku ilə çox rahat şəkildə aparılır. `await` ilə çağırılan Promise `reject` olarsa, `catch` bloku işə düşəcək.\n\n`async function getUserData() {\n  try {\n    const response = await fetch('https://invalid-url.com');\n    if (!response.ok) {\n      throw new Error('Şəbəkə cavabı düzgün deyil');\n    }\n    const data = await response.json();\n    console.log(data);\n  } catch (error) {\n    console.error('Xəta baş verdi:', error.message);\n  }\n}\n\nggetUserData();`"
+      },
+      {
+        "question": "Generator funksiyalar nədir?",
+        "answer": "Generator funksiyalar (`function*`), icrasını dayandırıb-davam etdirə bilən xüsusi funksiyalardır. Onlar `yield` açar sözü ilə dəyərləri addım-addım qaytarırlar. Generator funksiya çağırıldıqda dərhal icra olunmur, əvəzinə bir **iterator** obyekti qaytarır. Dəyərləri əldə etmək üçün bu iteratorun `next()` metodu çağırılmalıdır.\n\n`function* numberGenerator() {\n  yield 1;\n  yield 2;\n  yield 3;\n}\n\nconst gen = numberGenerator();\nconsole.log(gen.next()); // { value: 1, done: false }\nconsole.log(gen.next()); // { value: 2, done: false }\nconsole.log(gen.next()); // { value: 3, done: false }\nconsole.log(gen.next()); // { value: undefined, done: true }`"
+      },
+      {
+        "question": "Iterator nədir və necə işləyir?",
+        "answer": "Iterator, bir kolleksiyanın (məsələn, array, map, string) elementlərinə ardıcıl olaraq giriş etməyə imkan verən bir obyektdir. Iterator protokolu, `next()` metoduna malik bir obyekt tələb edir. `next()` metodu isə `{ value, done }` formatında bir obyekt qaytarır. `value` növbəti elementi, `done` isə iterasiyanın bitib-bitmədiyini göstərən boolean dəyərdir.\n\n`const arr = ['a', 'b'];\nconst it = arr[Symbol.iterator]();\n\nconsole.log(it.next()); // { value: 'a', done: false }\nconsole.log(it.next()); // { value: 'b', done: false }\nconsole.log(it.next()); // { value: undefined, done: true }`"
+      },
+      {
+        "question": "Callback Hell problemini necə həll edirik?",
+        "answer": "Callback Hell problemini həll etmənin ən müasir və effektiv yolları **Promise**-lər və onların üzərində qurulmuş **async/await** sintaksisidir.\n1. **Promises:** `then()` metodları ilə zəncirvari (chaining) quraraq kodu daha düz və oxunaqlı edir.\n2. **Async/Await:** Promise-ləri sinxron kod kimi göstərərək ən yüksək oxunaqlılığı təmin edir.\n\n`// Promise ilə həll\nstep1()\n  .then(step2)\n  .then(step3)\n  .catch(handleError);\n\n// Async/Await ilə həll\nasync function runSteps() {\n  try {\n    const result1 = await step1();\n    const result2 = await step2(result1);\n    const result3 = await step3(result2);\n  } catch (err) {\n    handleError(err);\n  }\n}`"
+      },
+      {
+        "question": "Promise.all və Promise.race fərqi nədir?",
+        "answer": "- **`Promise.all(promises)`**: Arqument olaraq bir promise massivi qəbul edir və yalnız **bütün** promise-lər uğurla tamamlandıqda yerinə yetirilir (`resolve`). Əgər promise-lərdən biri belə uğursuz olarsa (`reject`), `Promise.all` dərhal həmin xəta ilə `reject` olur.\n- **`Promise.race(promises)`**: Bir promise massivi qəbul edir və onlardan **hansısa biri** (ən sürətlisi) tamamlanan kimi (istər `resolve`, istərsə də `reject`) nəticəni qaytarır.\n\n`const p1 = new Promise(r => setTimeout(() => r('P1'), 100));\nconst p2 = new Promise(r => setTimeout(() => r('P2'), 200));\n\nPromise.all([p1, p2]).then(res => console.log(res)); // 200ms sonra ['P1', 'P2']\nPromise.race([p1, p2]).then(res => console.log(res)); // 100ms sonra 'P1'`"
+      },
+      {
+        "question": "Event bubbling və capturing nədir?",
+        "answer": "Bunlar DOM-da hadisələrin (events) yayılma mərhələləridir:\n- **Capturing Phase (Tutma):** Hadisə DOM ağacının ən yuxarısından (window) başlayaraq hədəf elementə doğru aşağıya doğru hərəkət edir.\n- **Target Phase (Hədəf):** Hadisə hədəf elementə çatır.\n- **Bubbling Phase (Qabarcıq):** Hadisə hədəf elementdən başlayaraq DOM ağacında yuxarıya doğru, valideyn elementlərə ötürülür. `addEventListener` standart olaraq bubbling mərhələsində işləyir.\n\n`// parent.addEventListener('click', handler, true); // Capturing\n// parent.addEventListener('click', handler, false); // Bubbling (default)`"
+      },
+      {
+        "question": "Context nədir və necə dəyişir?",
+        "answer": "JavaScript-də **context** adətən `this` açar sözünün dəyərinə aiddir. O, funksiyanın çağırıldığı obyektə istinad edir. `this`-in dəyəri (context) dinamikdir və aşağıdakı üsullarla dəyişdirilə bilər:\n- **`call(thisArg, ...args)`:** Funksiyanı dərhal yeni kontekstlə çağırır.\n- **`apply(thisArg, [args])`:** `call` kimi, amma arqumentləri massivdə alır.\n- **`bind(thisArg)`:** Yeni bir funksiya qaytarır, hansı ki, həmişə təyin edilmiş kontekstə bağlı olur.\n\n`function show() { console.log(this.name); }\nconst user1 = { name: 'Elvin' };\nconst user2 = { name: 'Sara' };\n\nshow.call(user1); // Elvin\nconst showForUser2 = show.bind(user2);\nshowForUser2(); // Sara`"
+      },
+      {
+        "question": "Immediately Invoked Arrow Function necə yazılır?",
+        "answer": "Immediately Invoked Arrow Function (IIAF) adi IIFE kimi yazılır, sadəcə `function` açar sözü yerinə arrow function sintaksisi istifadə olunur. Funksiya ifadəsi mötərizə içinə alınır və dərhal `()` ilə çağırılır.\n\n`(() => {\n  console.log('Immediately invoked arrow function işə düşdü!');\n})();`"
+      },
+      {
+        "question": "Factory Function nədir?",
+        "answer": "Factory function, obyekt yaradan və onu qaytaran adi bir funksiyadır. O, `new` açar sözü və `this` istifadə etmir. Bu, obyekt yaratma məntiqini bir yerdə cəmləmək və təkrar istifadə etmək üçün sadə bir yoldur.\n\n`function createPerson(name, age) {\n  return {\n    name: name,\n    age: age,\n    greet() {\n      console.log(`Salam, mən ${this.name}`);\n    }\n  };\n}\n\nconst person1 = createPerson('Nigar', 25);\nperson1.greet(); // Salam, mən Nigar`"
+      },
+      {
+        "question": "Constructor Function nədir?",
+        "answer": "Constructor function, `new` açar sözü ilə çağırılaraq obyektin yeni instanslarını yaratmaq üçün istifadə olunan xüsusi bir funksiyadır. Adətən böyük hərflə başlayır. `this` açar sözü vasitəsilə yeni yaradılan obyektin xüsusiyyətlərini təyin edir.\n\n`function Person(name, age) {\n  this.name = name;\n  this.age = age;\n}\n\nPerson.prototype.greet = function() {\n  console.log(`Salam, mən ${this.name}`);\n};\n\nconst person1 = new Person('Samir', 30);\nperson1.greet(); // Salam, mən Samir`"
+      },
+      {
+        "question": "Prototype nədir və nəyə lazımdır?",
+        "answer": "JavaScript-də hər funksiyanın bir `prototype` obyekti var. Bir funksiya konstruktor kimi (`new` ilə) istifadə edildikdə, yaratdığı bütün obyektlər bu `prototype` obyektindən miras alırlar (onların daxili `[[Prototype]]` və ya `__proto__` xüsusiyyəti konstruktorun `prototype`-na işarə edir). Prototype, obyektlər arasında metod və xüsusiyyətləri paylaşmaqla yaddaşa qənaət etməyə imkan verən **prototipik miras (prototypal inheritance)** mexanizminin əsasını təşkil edir.\n\n`function Dog(name) {\n  this.name = name;\n}\n\n// Metodu prototype-a əlavə edirik ki, bütün Dog instansları onu paylaşsın\nDog.prototype.bark = function() {\n  console.log('Hav-hav!');\n};\n\nconst myDog = new Dog('Toplan');\nmyDog.bark(); // Hav-hav!`"
+      },
+      {
+        "question": "Arrow function ilə constructor niyə mümkün deyil?",
+        "answer": "Arrow funksiyaları konstruktor kimi istifadə edilə bilməz, çünki onların iki əsas xüsusiyyəti yoxdur:\n1.  **`prototype` xüsusiyyəti yoxdur:** `new` operatoru yeni obyekti konstruktorun `prototype`-ı ilə bağlayır, arrow funksiyalarında isə bu yoxdur.\n2.  **Öz `this` konteksti yoxdur:** Arrow funksiyaları `this`-i leksik scope-dan götürür, `new` isə yeni obyektə istinad edən bir `this` yaratmağa çalışır ki, bu da bir-biri ilə ziddiyyət təşkil edir.\n\n`const Animal = () => {};\n// const myAnimal = new Animal(); // TypeError: Animal is not a constructor`"
+      },
+      {
+        "question": "Immediately Invoked Function nə üçün istifadə olunur?",
+        "answer": "IIFE-nin əsas məqsədi **qlobal scope-un çirklənməsinin qarşısını almaqdır (avoid polluting the global namespace)**. O, dəyişənləri və funksiyaları lokal bir scope-da saxlayaraq, digər skriptlər və ya kitabxanalarla potensial ad toqquşmalarının qarşısını alır.\n\n`(function() {\n  // Bu dəyişən yalnız bu scope-da mövcuddur\n  var privateVar = 'Gizli məlumat';\n})();\n// console.log(privateVar); // Xəta`"
+      },
+      {
+        "question": "Module Pattern nədir?",
+        "answer": "Module Pattern, JavaScript-də **public** və **private** üzvlər (metodlar və dəyişənlər) yaratmaq üçün istifadə edilən bir dizayn nümunəsidir. Bu, adətən IIFE və closure-lar vasitəsilə həyata keçirilir. Funksiya öz daxilində bəzi üzvləri gizli saxlayır və yalnız ictimai interfeys olaraq təqdim etmək istədiklərini bir obyekt içində qaytarır.\n\n`const myModule = (function() {\n  // Private\n  const privateVar = 'Mən gizliyəm';\n  function privateMethod() {\n    return privateVar;\n  }\n\n  // Public\n  return {\n    publicMethod: function() {\n      return privateMethod();\n    }\n  };\n})();\n\nconsole.log(myModule.publicMethod()); // \"Mən gizliyəm\"\n// console.log(myModule.privateVar); // undefined`"
+      },
+      {
+        "question": "Singleton pattern nədir?",
+        "answer": "Singleton, bir sinifdən (class) yalnız **bir və yalnız bir** instansiyanın (obyektin) yaradılmasını təmin edən və həmin instansiyaya qlobal bir giriş nöqtəsi təqdim edən bir dizayn nümunəsidir. Eyni obyektə təkrar-təkrar ehtiyac olduqda (məsələn, konfiqurasiya obyekti, verilənlər bazası bağlantısı) istifadə olunur.\n\n`const Singleton = (function() {\n  let instance;\n\n  function createInstance() {\n    const object = new Object(\"I am the instance\");\n    return object;\n  }\n\n  return {\n    getInstance: function() {\n      if (!instance) {\n        instance = createInstance();\n      }\n      return instance;\n    }\n  };\n})();\n\nconst instance1 = Singleton.getInstance();\nconst instance2 = Singleton.getInstance();\n\nconsole.log(instance1 === instance2); // true`"
+      },
+      {
+        "question": "Memoization nədir?",
+        "answer": "Memoization, baha başa gələn (resurs tələb edən) funksiya çağırışlarının nəticələrini yadda saxlamaq (cache etmək) və eyni arqumentlərlə təkrar çağırıldıqda hesablamanı yenidən aparmaq əvəzinə yadda saxlanmış nəticəni dərhal qaytarmaqla performansı artıran bir optimallaşdırma texnikasıdır.\n\n`function memoize(fn) {\n  const cache = {};\n  return function(...args) {\n    const key = JSON.stringify(args);\n    if (cache[key]) {\n      return cache[key];\n    }\n    const result = fn(...args);\n    cache[key] = result;\n    return result;\n  };\n}\n\nconst slowFunction = (num) => { /* ...ağır hesablama... */ return num * 2; };\nconst fastFunction = memoize(slowFunction);\n\nconsole.log(fastFunction(5)); // İlk dəfə hesablayır\nconsole.log(fastFunction(5)); // İkinci dəfə cache-dən götürür`"
+      },
+      {
+        "question": "Currying nə işə yarayır?",
+        "answer": "Currying, bir funksiyanı tək parametrli funksiyaların ardıcıllığına çevirərək kodu daha **çevik**, **təkrar istifadə edilə bilən** və **kompozisiya edilə bilən** edir. O, funksiyanın arqumentlərini hissə-hissə tətbiq etməyə (partial application) imkan verir, yəni bəzi arqumentləri əvvəlcədən təyin edərək yeni, daha spesifik funksiyalar yaratmaq olar.\n\n`const multiply = (a, b) => a * b;\nconst curriedMultiply = (a) => (b) => a * b;\n\nconst double = curriedMultiply(2);\nconsole.log(double(10)); // 20`"
+      },
+      {
+        "question": "Pure function-ların üstünlüyü nədir?",
+        "answer": "Pure function-ların əsas üstünlükləri bunlardır:\n- **Proqnozlaşdırıla bilən (Predictable):** Eyni giriş həmişə eyni çıxışı verir, bu da kodu anlamağı asanlaşdırır.\n- **Test edilə bilən (Testable):** Xarici vəziyyətdən asılı olmadığı üçün onları sınaqdan keçirmək çox sadədir.\n- **Təkrar istifadə edilə bilən (Reusable):** Yan təsirləri olmadığı üçün proqramın istənilən yerində təhlükəsiz şəkildə istifadə edilə bilər.\n- **Parallel icra üçün uyğun:** Bir-birindən asılı olmadıqları üçün eyni vaxtda təhlükəsiz icra oluna bilərlər.\n\n`// Pure function-u test etmək asandır.\n// expect(add(2, 3)).toBe(5);`"
+      },
+      {
+        "question": "Asinxron və sinxron funksiyalar fərqi nədir?",
+        "answer": "- **Sinxron (Synchronous):** Əməliyyatlar ardıcıl olaraq, bir-birini gözləyərək icra olunur. Bir tapşırıq bitmədən digəri başlamaz (blocking).\n- **Asinxron (Asynchronous):** Əməliyyat başlanır və nəticəsi gələnə qədər proqram digər tapşırıqları icra etməyə davam edir (non-blocking). Nəticə hazır olduqda, adətən bir callback, promise və ya async/await vasitəsilə idarə olunur.\n\n`console.log('Sinxron 1'); // 1-ci icra olunur\nsetTimeout(() => console.log('Asinxron'), 0); // Event loop-a gedir\nconsole.log('Sinxron 2'); // 2-ci icra olunur\n// Nəticədə 'Asinxron' ən axırda çap olunur.`"
+      },
+      {
+        "question": "Promise chaining necə işləyir?",
+        "answer": "Promise chaining, bir-birinin ardınca `then()` metodlarını çağırmaqla asinxron əməliyyatları ardıcıl olaraq yerinə yetirməkdir. Hər bir `then()` metodu özündən əvvəlki promise-in uğurlu nəticəsini (`resolve` dəyərini) qəbul edir və özü də yeni bir promise qaytarır. Bu, kodun iç-içə düşməsinin (callback hell) qarşısını alır.\n\n`new Promise(resolve => resolve(10))\n  .then(result => {\n    console.log(result); // 10\n    return result * 2;\n  })\n  .then(result => {\n    console.log(result); // 20\n    return result + 5;\n  })\n  .then(result => {\n    console.log(result); // 25\n  });`"
+      },
+      {
+        "question": "Async function hər zaman nə qaytarır?",
+        "answer": "`async` açar sözü ilə işarələnmiş funksiyalar **həmişə** bir `Promise` qaytarır. Əgər funksiyanın daxilində bir dəyər `return` edirsinizsə, həmin dəyər avtomatik olaraq uğurla tamamlanmış bir `Promise` (`Promise.resolve(value)`) içinə bükülür. Əgər funksiya bir xəta atırsa, o, uğursuz bir `Promise` (`Promise.reject(error)`) qaytarır.\n\n`async function getValue() {\n  return 42;\n}\n\ngetValue().then(val => console.log(val)); // 42\nconsole.log(getValue()); // Promise { <fulfilled>: 42 }`"
+      },
+      {
+        "question": "JSON.stringify və JSON.parse nə üçündür?",
+        "answer": "- **`JSON.stringify(object)`:** Bir JavaScript obyektini və ya dəyərini JSON (JavaScript Object Notation) formatında bir **stringə** çevirir. Bu, məlumatları serverə göndərmək və ya `localStorage`-da saxlamaq üçün istifadə olunur.\n- **`JSON.parse(string)`:** JSON formatında olan bir stringi yenidən JavaScript obyektinə çevirir.\n\n`const user = { name: 'Elxan', age: 28 };\nconst jsonString = JSON.stringify(user); // '{\"name\":\"Elxan\",\"age\":28}'\nconst userObject = JSON.parse(jsonString); // { name: 'Elxan', age: 28 }`"
+      },
+      {
+        "question": "Deep copy və shallow copy fərqi nədir?",
+        "answer": "- **Shallow Copy (Dayaz Kopyalama):** Obyektin yalnız birinci səviyyədəki xüsusiyyətlərini kopyalayır. Əgər bu xüsusiyyətlər özləri də obyekt və ya massivdirsə, onların özləri deyil, yaddaşdakı referansları (ünvanları) kopyalanır. Nəticədə, orijinal və kopya obyektlər daxili obyektləri paylaşırlar.\n- **Deep Copy (Dərin Kopyalama):** Obyektin bütün səviyyələrini, yəni bütün iç-içə obyektləri və massivləri rekursiv olaraq kopyalayır. Nəticədə, tamamilə müstəqil yeni bir obyekt yaranır.\n\n`const original = { a: 1, b: { c: 2 } };\n// Shallow copy\nconst shallow = { ...original };\nshallow.b.c = 99;\nconsole.log(original.b.c); // 99 (orijinal da dəyişdi)\n\n// Deep copy (sadə üsul)\nconst deep = JSON.parse(JSON.stringify(original));\ndeep.b.c = 50;\nconsole.log(original.b.c); // 99 (orijinal dəyişmədi)`"
+      },
+      {
+        "question": "Spread operator və Object.assign fərqi nədir?",
+        "answer": "Hər ikisi obyektləri birləşdirmək və ya kopyalamaq üçün istifadə olunur (shallow copy). Əsas fərqlər:\n- **Sintaksis:** Spread operatoru (`...`) daha müasir və qısa ES6 sintaksisidir. `Object.assign()` isə bir metoddur.\n- **Məqsəd obyekt:** `Object.assign(target, ...sources)` birinci arqumenti (target) dəyişdirir. Spread isə həmişə yeni bir obyekt yaradır.\n\n`const obj1 = { a: 1 };\nconst obj2 = { b: 2 };\n\n// Object.assign\nconst assigned = Object.assign({}, obj1, obj2); // { a: 1, b: 2 }\n\n// Spread operator\nconst spreaded = { ...obj1, ...obj2 }; // { a: 1, b: 2 }`"
+      },
+      {
+        "question": "Destructuring nədir?",
+        "answer": "Destructuring (parçalama), massivlərdən (array) və ya obyektlərdən dəyərləri çıxararaq onları ayrı-ayrı dəyişənlərə rahat və qısa bir sintaksislə mənimsətmək imkanı verən bir ES6 xüsusiyyətidir.\n\n`// Obyekt destructuring\nconst user = { name: 'Aynur', age: 31 };\nconst { name, age } = user;\nconsole.log(name, age); // Aynur 31\n\n// Massiv destructuring\nconst numbers = [10, 20, 30];\nconst [first, second] = numbers;\nconsole.log(first, second); // 10 20`"
+      },
+      {
+        "question": "Immediately Invoked Generator necə çağırılır?",
+        "answer": "Immediately Invoked Generator, bir generator funksiyasını təyin edib dərhal çağırmaq və onun iteratorundan bir dəyər əldə etmək üçün istifadə olunur. Adi IIFE kimi, funksiya mötərizəyə alınır, lakin `()` ilə çağırıldıqdan sonra iteratorun `next()` metodu da çağırılmalıdır.\n\n`const result = (function* () { \n  yield 'İlk dəyər'; \n  yield 'İkinci dəyər'; \n})().next();\n\nconsole.log(result); // { value: 'İlk dəyər', done: false }`"
+      },
+      {
+        "question": "Hoisting-in riskləri nədir?",
+        "answer": "Hoisting, xüsusilə `var` ilə istifadə edildikdə, gözlənilməz davranışlara səbəb ola bilər:\n- **Dəyişənlərin `undefined` olması:** Təyin olunmadan əvvəl istifadə edilən `var` dəyişənləri `undefined` dəyərini alır ki, bu da məntiq xətalarına yol aça bilər.\n- **Kodun oxunaqlılığının azalması:** Dəyişənlərin və funksiyaların istifadə edildiyi yerdən sonra təyin edilməsi kodun axınını anlamağı çətinləşdirir. Bu problemlərin qarşısını almaq üçün müasir JavaScript-də `var` əvəzinə `let` və `const` istifadə etmək tövsiyə olunur."
+      },
+      {
+        "question": "Callback error-first pattern nədir?",
+        "answer": "Error-first pattern, xüsusilə Node.js-də geniş yayılmış bir konvensiyadır ki, asinxron funksiyalara ötürülən callback funksiyalarının **ilk arqumenti həmişə səhv (error) obyekti üçün rezerv olunur**. Əgər heç bir səhv baş verməzsə, bu arqument `null` və ya `undefined` olur. Növbəti arqumentlər isə uğurlu nəticənin məlumatlarını saxlayır.\n\n`fs.readFile('fayl.txt', (err, data) => {\n  if (err) {\n    // Səhvi idarə et\n    console.error('Səhv:', err);\n    return;\n  }\n  // Uğurlu nəticəni istifadə et\n  console.log(data);\n});`"
+      },
+      {
+        "question": "Promise.resolve və Promise.reject nə edir?",
+        "answer": "Bunlar bir dəyəri və ya səhvi dərhal bir `Promise`-ə çevirmək üçün istifadə olunan statik köməkçi metodlardır:\n- **`Promise.resolve(value)`:** Verilmiş dəyərlə dərhal uğurla tamamlanmış (`fulfilled`) bir `Promise` obyekti qaytarır.\n- **`Promise.reject(reason)`:** Verilmiş səbəblə (`reason`) dərhal rədd edilmiş (`rejected`) bir `Promise` obyekti qaytarır.\n\n`Promise.resolve('Uğurlu!').then(v => console.log(v));\nPromise.reject(new Error('Uğursuz!')).catch(e => console.error(e.message));`"
+      },
+      {
+        "question": "Promise.finally nə edir?",
+        "answer": "`finally(callback)` metodu, bir promise zəncirinə əlavə olunur və promise-in uğurla tamamlanmasından (`resolve`) və ya rədd edilməsindən (`reject`) asılı olmayaraq, **hər zaman** işə düşən bir callback funksiyasını icra edir. Bu, adətən, nəticədən asılı olmayan təmizləmə işləri (məsələn, loader-i gizlətmək) üçün istifadə olunur.\n\n`fetchData()\n  .then(data => console.log(data))\n  .catch(err => console.error(err))\n  .finally(() => console.log('Əməliyyat bitdi.'));`"
+      },
+      {
+        "question": "Event delegation nədir?",
+        "answer": "Event delegation (hadisə nümayəndəliyi), çoxsaylı övlad elementlər üçün tək-tək hadisə dinləyiciləri (event listener) təyin etmək əvəzinə, hadisəni onların ümumi valideyn elementinə qoşmaq texnikasıdır. Bubbling fazasından istifadə edərək, valideyn hansı övlad elementin hadisəyə səbəb olduğunu müəyyən edir. Bu, performansı artırır və dinamik olaraq əlavə edilən elementlər üçün də işləyir.\n\n`document.getElementById('list').addEventListener('click', function(e) {\n  if (e.target && e.target.nodeName === 'LI') {\n    console.log('Kliklənən element:', e.target.textContent);\n  }\n});`"
+      },
+      {
+        "question": "Async Iterator nədir?",
+        "answer": "Async Iterator, asinxron olaraq gələn məlumat ardıcıllığını (məsələn, şəbəkədən hissə-hissə gələn data) iterasiya etməyə imkan verən bir protokoldur. Adi iteratordan fərqli olaraq, `next()` metodu `{ value, done }` obyektini bir `Promise` içində qaytarır. ES2018 ilə gələn `for await...of` dövrü, async iteratorları sinxron dövr kimi rahatlıqla istifadə etməyə imkan verir.\n\n`const asyncIterable = {\n  [Symbol.asyncIterator]() {\n    let i = 0;\n    return {\n      next() {\n        return Promise.resolve({ value: i++, done: i > 3 });\n      }\n    };\n  }\n};\n\n(async () => {\n  for await (const num of asyncIterable) {\n    console.log(num);\n  }\n})(); // 0, 1, 2`"
+      },
+      {
+        "question": "Temporal Dead Zone nədir?",
+        "answer": "Temporal Dead Zone (TDZ), `let` və `const` ilə təyin olunmuş dəyişənlərin öz scope-larının başlanğıcından onların təyin edildiyi (initialization) yerə qədər olan mərhələdir. Bu zona daxilində həmin dəyişənlərə müraciət etmək `ReferenceError` xətasına səbəb olur. Bu, `var`-ın `undefined` davranışı kimi gözlənilməz halların qarşısını alır.\n\n`{\n  // TDZ for 'myVar' starts here\n  // console.log(myVar); // ReferenceError\n  let myVar = 'Hello'; // TDZ for 'myVar' ends here\n  console.log(myVar); // 'Hello'\n}`"
+      },
+      {
+        "question": "Function parameter destructuring necə edilir?",
+        "answer": "Funksiya parametrlərini destructuring etmək, funksiyaya ötürülən obyekt və ya massivdən lazımi xüsusiyyətləri birbaşa parametr siyahısında parçalayaraq dəyişənlərə mənimsətməkdir. Bu, kodu daha səliqəli və oxunaqlı edir.\n\n`// Obyekt parametrini parçalamaq\nfunction printUserDetails({ name, profile: { age } }) {\n  console.log(`Ad: ${name}, Yaş: ${age}`);\n}\n\nconst user = { name: 'Vüsal', profile: { age: 29 } };\nprintUserDetails(user);`"
+      },
+      {
+        "question": "Dynamic import nədir?",
+        "answer": "Dynamic import, `import()` sintaksisi ilə bir JavaScript modulunu proqramın icrası zamanı, lazım olduqda asinxron şəkildə yükləməyə imkan verir. Statik `import` bildirişindən fərqli olaraq, `import()` bir `Promise` qaytarır və proqramın başlanğıc performansını artırmaq (code splitting) üçün istifadə olunur.\n\n`document.getElementById('loadModuleBtn').addEventListener('click', async () => {\n  try {\n    const module = await import('./myModule.js');\n    module.doSomething();\n  } catch (error) {\n    console.error('Modul yüklənə bilmədi:', error);\n  }\n});`"
+      },
+      {
+        "question": "Module export və default export fərqi nədir?",
+        "answer": "- **`export` (Named Export):** Bir moduldan çoxlu sayda dəyişən, funksiya və ya sinif ixrac etməyə imkan verir. İdxal edilərkən, `{}` mötərizələri içində dəqiq adları ilə çağırılmalıdırlar.\n- **`export default`:** Bir moduldan yalnız **bir** əsas (default) dəyər ixrac etmək üçündür. İdxal edilərkən, istənilən adla, mötərizəsiz çağırıla bilər.\n\n`// my-module.js\nexport const name = 'John';\nexport default function sayHi() { console.log('Hi'); }\n\n// main.js\nimport sayHi, { name } from './my-module.js';`"
+      },
+      {
+        "question": "Revealing module pattern nədir?",
+        "answer": "Revealing Module Pattern, adi Module Pattern-in bir təkmilləşdirilməsidir. Bu nümunədə, bütün üzvlər (metodlar və xüsusiyyətlər) əvvəlcə **private** olaraq təyin edilir. Sonra, yalnız ictimaiyyətə açıq olmalı olan üzvlərə istinad edən bir obyekt qaytarılır. Bu, hansı üzvlərin public olduğunu daha aydın şəkildə göstərir.\n\n`const myRevealingModule = (function () {\n  let privateVar = 'Private Data';\n  function publicFunction() {\n    console.log(privateVar);\n  }\n\n  // Reveal public pointers to private functions and properties\n  return {\n    reveal: publicFunction\n  };\n})();\n\nmyRevealingModule.reveal();`"
+      },
+      {
+        "question": "Event loop-un stack və queue fərqi nədir?",
+        "answer": "- **Call Stack (Çağırış Yığını):** JavaScript-in sinxron kod əməliyyatlarını və funksiya çağırışlarını izlədiyi LIFO (Last-In, First-Out) tipli bir məlumat strukturudur. Funksiya çağırıldıqda stack-ə əlavə olunur, işi bitdikdə isə çıxarılır.\n- **Callback Queue (or Task Queue):** `setTimeout`, `setInterval`, istifadəçi hadisələri kimi asinxron əməliyyatların callback funksiyalarının saxlandığı FIFO (First-In, First-Out) tipli bir növbədir. Event Loop, Call Stack boş olduqda buradan tapşırıqları götürüb Stack-ə yerləşdirir."
+      },
+      {
+        "question": "Microtask və macrotask fərqi nədir?",
+        "answer": "Hər ikisi də asinxron tapşırıq növbələridir, lakin **Microtask Queue** daha yüksək prioritetə malikdir. Event Loop hər dövründə, bir macrotask icra etməzdən əvvəl Microtask Queue-dəki **bütün** tapşırıqları icra edir.\n- **Microtasks:** `Promise.then/catch/finally`, `queueMicrotask`, `MutationObserver`.\n- **Macrotasks (or Tasks):** `setTimeout`, `setInterval`, `setImmediate`, I/O, UI rendering.\n\n`setTimeout(() => console.log('macro'), 0); // Macrotask\nPromise.resolve().then(() => console.log('micro')); // Microtask\n// Çıxış: 'micro', sonra 'macro'`"
+      },
+      {
+        "question": "Scope chain nədir?",
+        "answer": "Scope Chain (Əhatə Dairəsi Zənciri), bir dəyişənə müraciət edildikdə JavaScript mühərrikinin həmin dəyişəni axtarmaq üçün izlədiyi iyerarxik yoldur. Axtarış cari funksiyanın scope-undan başlayır, əgər tapılmazsa, xarici (üst) scope-a keçir və bu proses qlobal scope-a çatana qədər davam edir. Closure-ların işləmə mexanizmi məhz scope chain-ə əsaslanır."
+      },
+      {
+        "question": "Block scope ilə function scope fərqi nədir?",
+        "answer": "Əsas fərq dəyişənin əlçatan olduğu ən kiçik sahədir:\n- **Function Scope:** `var` ilə təyin edilmiş dəyişənlər yalnız təyin olunduqları funksiyanın daxilində əlçatandır.\n- **Block Scope:** `let` və `const` ilə təyin edilmiş dəyişənlər yalnız təyin olunduqları `{}`, `if`, `for`, `while` bloku daxilində əlçatandır. Bu, daha dəqiq və təhlükəsiz dəyişən idarəçiliyi təmin edir."
+      },
+      {
+        "question": "Arrow function 'arguments' obyektini niyə dəstəkləmir?",
+        "answer": "Arrow function-lar dizayn etibarilə daha yüngül və sadə olmaq üçün yaradılıblar. Onların öz `this`, `super`, və ya `arguments` kontekstləri yoxdur. Bu dəyərlərə müraciət etdikdə, onlar leksik olaraq, yəni əhatə edən (üst) adi funksiyanın kontekstindən götürülürlər. Müasir JavaScript-də `arguments` obyektinin əvəzinə **rest parametri (`...args`)** istifadə olunur ki, bu da əsl massivdir və daha rahatdır."
+      },
+      {
+        "question": "Bind metodunun istifadəsi nə vaxt lazımdır?",
+        "answer": "`bind()` metodu, bir funksiyanın `this` kontekstinin itirildiyi hallarda onu müəyyən bir obyektə \"bağlamaq\" üçün lazımdır. Bu, ən çox aşağıdakı hallarda baş verir:\n- **Event Listeners:** `this`-in hadisənin baş verdiyi elementə işarə etdiyi zaman.\n- **Callbacks:** `setTimeout` kimi funksiyalara callback ötürdükdə (`this` qlobal obyektə (window) çevrilir).\n\n`class MyClass {\n  constructor() {\n    this.data = 'məlumat';\n    document.getElementById('btn').addEventListener('click', this.handleClick.bind(this));\n  }\n  handleClick() {\n    console.log(this.data); // .bind(this) olmasa, 'this' düymə elementi olardı\n  }\n}`"
+      },
+      {
+        "question": "Function memoization harada istifadə olunur?",
+        "answer": "Memoization, nəticəsi dəyişməyən və hesablanması baha başa gələn (CPU-yoğun) \"təmiz\" (pure) funksiyalar üçün idealdır. Praktiki istifadə sahələri:\n- **Mürəkkəb riyazi hesablamalar:** Məsələn, böyük Fibonaççi ədədlərinin rekursiv hesablanması.\n- **API sorğularının nəticələrinin keşlənməsi (caching):** Eyni sorğuya təkrar şəbəkə müraciəti etməmək üçün.\n- **Mürəkkəb renderinq funksiyaları:** React kimi freymvorklarda eyni props ilə komponentin təkrar render edilməsinin qarşısını almaq üçün (`React.memo`)."
+      },
+      {
+        "question": "Function decorator nədir?",
+        "answer": "Decorator, mövcud bir funksiyanın və ya sinifin kodunu dəyişdirmədən onun davranışına əlavə funksionallıq (məsələn, loqlama, icazə yoxlanışı, memoization) əlavə edən xüsusi bir dizayn nümunəsidir (və bəzi dillərdə sintaksis). JavaScript-də bu, adətən başqa bir funksiyanı qəbul edib onu əlavə funksionallıqla \"bükərək\" yeni bir funksiya qaytaran yüksək səviyyəli bir funksiya (higher-order function) kimi həyata keçirilir.\n\n`function withLogging(fn) {\n  return function(...args) {\n    console.log(`Calling ${fn.name}...`);\n    return fn(...args);\n  };\n}\nfunction add(a, b) { return a + b; }\nconst loggedAdd = withLogging(add);\nloggedAdd(3, 4);`"
+      },
+      {
+        "question": "Partial application nədir?",
+        "answer": "Partial application, çox arqumentli bir funksiyanın bəzi arqumentlərini əvvəlcədən təyin edərək (dolduraraq) daha az arqumentli yeni bir funksiya yaratmaq prosesidir. `bind()` metodu bunun üçün istifadə edilə bilər. Currying-dən fərqli olaraq, partial application mütləq tək arqumentli funksiyalar yaratmır.\n\n`function multiply(a, b, c) {\n  return a * b * c;\n}\n\n// 'a' arqumentini 2 olaraq əvvəlcədən təyin edirik\nconst multiplyByTwo = multiply.bind(null, 2);\n\nconsole.log(multiplyByTwo(3, 4)); // 2 * 3 * 4 = 24`"
+      },
+      {
+        "question": "Callback-lər Promise-lərlə necə əvəz olunur?",
+        "answer": "Callback əsaslı bir funksiyanı Promise əsaslıya çevirmək üçün, callback qəbul edən funksiyanı yeni bir `Promise` konstruktoru içində \"bükmək\" lazımdır. Asinxron əməliyyat uğurlu olduqda `resolve()` çağırılır, səhv baş verdikdə isə `reject()` çağırılır. Bu prosesə \"promisifying\" deyilir.\n\n`function readFilePromise(path) {\n  return new Promise((resolve, reject) => {\n    fs.readFile(path, (err, data) => {\n      if (err) {\n        reject(err);\n      } else {\n        resolve(data);\n      }\n    });\n  });\n}\n\nreadFilePromise('file.txt').then(data => console.log(data));`"
+      },
+      {
+        "question": "Lazy evaluation nədir?",
+        "answer": "Lazy evaluation (tənbəl qiymətləndirmə), bir ifadənin dəyərinin yalnız ona həqiqətən ehtiyac duyulduğu anda hesablanması strategiyasıdır. JavaScript-də generator funksiyaları lazy evaluation üçün klassik bir nümunədir. Generator bir dəyər `yield` etdikdə, növbəti `next()` çağırılana qədər heç bir hesablama aparmır. Bu, sonsuz ardıcıllıqlarla işləməyə və performansı optimallaşdırmağa imkan verir.\n\n`function* lazySequence() {\n  let i = 0;\n  while(true) {\n    yield i++; // Dəyər yalnız next() çağırılanda hesablanır\n  }\n}`"
+      },
+      {
+        "question": "Immediately invoked async function necə yazılır?",
+        "answer": "Immediately Invoked Async Function, bir `async` funksiyanı təyin edib dərhal çağırmaq üçün istifadə olunur. Bu, xüsusilə modulların ən üst səviyyəsində `await`-dən istifadə etmək lazım olduqda (top-level await dəstəklənməyən mühitlərdə) faydalıdır. Sintaksis adi IIFE kimidir, sadəcə funksiyanın qarşısına `async` açar sözü əlavə edilir.\n\n`(async () => {\n  try {\n    const data = await fetch('api/data');\n    console.log(await data.json());\n  } catch(e) {\n    console.error(e);\n  }\n})();`"
+      }
     ],
     "practice_tasks": [
-      { "title": "İki ədədi toplayan funksiya", "description": "İki ədədi qəbul edib cəmini qaytaran funksiya yazın.", "solution": "function sum(a,b){return a+b;}" },
-      { "title": "Ən böyük ədədi tap", "description": "Massivdəki ən böyük ədədi tapın.", "solution": "function maxNum(arr){return Math.max(...arr);}" },
-      { "title": "Closure Counter", "description": "Hər çağırışda 1 artıran closure yazın.", "solution": "function counter(){let c=0;return()=>++c;}" },
-      { "title": "Delay Funksiya", "description": "`setTimeout` ilə 2 saniyə sonra mesaj verin.", "solution": "function delay(cb,ms){setTimeout(cb,ms);}" },
-      { "title": "Fullname qaytaran funksiya", "description": "Ad və soyadı birləşdirib qaytarsın.", "solution": "const fullName=(a,b)=>`${a} ${b}`;" },
-      { "title": "Array Filter", "description": "Cüt ədədləri qaytaran funksiya yazın.", "solution": "const even=(arr)=>arr.filter(n=>n%2===0);" },
-      { "title": "Sum Reduce ilə", "description": "Massiv cəmini reduce ilə tapın.", "solution": "const total=arr=>arr.reduce((a,b)=>a+b,0);" },
-      { "title": "Debounce", "description": "Funksiyanın təkrarlanan çağırışlarını gecikdirin.", "solution": "function debounce(fn,delay){let t;return(...a)=>{clearTimeout(t);t=setTimeout(()=>fn(...a),delay)}}" },
-      { "title": "Throttle", "description": "Funksiyanı müəyyən intervalda çağırın.", "solution": "function throttle(fn,delay){let t=false;return(...a)=>{if(!t){fn(...a);t=true;setTimeout(()=>t=false,delay)}}}" },
-      { "title": "Promise ilə Fetch", "description": "API nəticəsini console-a yazdırın.", "solution": "fetch('https://api').then(r=>r.json()).then(d=>console.log(d));" },
-      { "title": "Async Await", "description": "Async funksiyada await istifadə edin.", "solution": "async function getData(){const r=await fetch('url');return await r.json();}" },
-      { "title": "Recursive Factorial", "description": "Ədədin faktorialını hesablayın.", "solution": "function fact(n){return n<=1?1:n*fact(n-1)}" },
-      { "title": "Arrow Function ilə Map", "description": "Massivdəki ədədləri 2 ilə vurun.", "solution": "const doubled=arr=>arr.map(x=>x*2);" },
-      { "title": "Bind nümunəsi", "description": "`this` kontekstini bağlayın.", "solution": "const user={name:'Ali'};function show(){console.log(this.name);}const fn=show.bind(user);fn();" },
-      { "title": "Call nümunəsi", "description": "`call` ilə funksiyanı başqa obyektlə çağırın.", "solution": "function hi(){console.log(this.msg)};hi.call({msg:'Salam'});" },
-      { "title": "Apply nümunəsi", "description": "`apply` ilə parametr massivini ötürün.", "solution": "function sum(a,b){return a+b};console.log(sum.apply(null,[2,3]));" },
-      { "title": "Chaining nümunəsi", "description": "Metodları birləşdirin.", "solution": "class Calc{constructor(n){this.n=n}add(x){this.n+=x;return this}mul(x){this.n*=x;return this}res(){return this.n}}console.log(new Calc(2).add(3).mul(2).res());" },
-      { "title": "IIFE ilə counter", "description": "IIFE ilə təcrid olunmuş sayğac yaradın.", "solution": "const counter=(function(){let c=0;return()=>++c})();" },
-      { "title": "Default param", "description": "Parametr ötürülməsə default dəyər olsun.", "solution": "function greet(name='qonaq'){return`Salam ${name}`}" },
-      { "title": "Spread operator", "description": "İki array birləşdirin.", "solution": "const a=[1,2],b=[3,4];const c=[...a,...b];" },
-      { "title": "Rest param", "description": "İstənilən sayda ədəd toplayan funksiya.", "solution": "function sum(...nums){return nums.reduce((a,b)=>a+b)}" },
-      { "title": "Pure Function", "description": "Massivə toxunmadan yeni array qaytarın.", "solution": "function addNum(arr,n){return [...arr,n]}" },
-      { "title": "Impure Function", "description": "Massivi dəyişdirən nümunə.", "solution": "function pushNum(arr,n){arr.push(n);return arr}" },
-      { "title": "Lexical Scope test", "description": "Daxili funksiyadan xarici dəyişənə giriş edin.", "solution": "function outer(){let x=5;function inner(){console.log(x);}inner();}" },
-      { "title": "Promise Chain", "description": "Promise-ləri zəncirvari çağırın.", "solution": "Promise.resolve(1).then(r=>r+1).then(console.log);" },
-      { "question": "Generator funksiyalar nədir?", "answer": "Generator funksiyalar `function*` ilə yaradılır və `yield` açar sözü ilə nəticələri addım-addım qaytarır." },
-      { "question": "Iterator nədir və necə işləyir?", "answer": "Iterator obyektlərdə ardıcıl olaraq elementlərə giriş etməyə imkan verən interfeysdir (`next()` metodu ilə işləyir)." },
-      { "question": "Callback Hell problemini necə həll edirik?", "answer": "Promise və async/await istifadə edərək callback hell problemini aradan qaldırmaq olar." },
-      { "question": "Promise.all və Promise.race fərqi nədir?", "answer": "`Promise.all` bütün promise-lərin nəticəsini qaytarır, `Promise.race` isə birincisi tamamlanan promise-in nəticəsini." },
-      { "question": "Event bubbling və capturing nədir?", "answer": "Event bubbling hadisələrin DOM ağacında yuxarı doğru, capturing isə aşağı doğru ötürülməsidir." },
-      { "question": "Context nədir və necə dəyişir?", "answer": "Context funksiyanın çağırıldığı obyektə əsasən `this`-in dəyəridir. `bind`, `call`, `apply` ilə dəyişmək mümkündür." },
-      { "question": "Immediately Invoked Arrow Function necə yazılır?", "answer": "(() => { console.log('Run'); })();" },
-      { "question": "Factory Function nədir?", "answer": "Factory function obyekt yaradan və qaytaran funksiyadır, `new` açar sözü olmadan işləyir." },
-      { "question": "Constructor Function nədir?", "answer": "`new` ilə çağırılan və obyektin instansını yaradan funksiyadır." },
-      { "question": "Prototype nədir və nəyə lazımdır?", "answer": "Prototype obyektlərə miras (inheritance) xüsusiyyəti verir, hər obyekt `__proto__` ilə əlaqəlidir." },
-      { "question": "Arrow function ilə constructor niyə mümkün deyil?", "answer": "Çünki arrow function-ların `prototype`-u yoxdur və `this`-i sabitdir." },
-      { "question": "Immediately Invoked Function nə üçün istifadə olunur?", "answer": "Global namespace-in çirklənməsinin qarşısını almaq üçün." },
-      { "question": "Module Pattern nədir?", "answer": "Kodun parçalanmasını və dəyişənlərin gizlədilməsini təmin edən dizayn pattern-dir." },
-      { "question": "Singleton pattern nədir?", "answer": "Bir obyektin yalnız bir instansının yaradılmasını təmin edən pattern-dir." },
-      { "question": "Memoization nədir?", "answer": "Eyni arqumentlərlə çağırıldıqda nəticəni yadda saxlayaraq performansı artıran texnikadır." },
-      { "question": "Currying nə işə yarayır?", "answer": "Funksiyanı tək parametrli funksiyalara bölərək kodu daha çevik edir." },
-      { "question": "Pure function-ların üstünlüyü nədir?", "answer": "Test edilə bilən, təkrarlana bilən və yan təsirsiz kod yazmağa imkan verir." },
-      { "question": "Asinxron və sinxron funksiyalar fərqi nədir?", "answer": "Sinxron funksiyalar ardıcıl icra olunur, asinxronlar isə `event loop` vasitəsilə sonraya buraxılır." },
-      { "question": "Promise chaining necə işləyir?", "answer": "Bir promise-in nəticəsi digər `then()`-ə ötürülür." },
-      { "question": "Async function hər zaman nə qaytarır?", "answer": "Async funksiyalar həmişə Promise qaytarır." },
-      { "question": "JSON.stringify və JSON.parse nə üçündür?", "answer": "Obyekti stringə çevirmək və ya stringi obyektə çevirmək üçün istifadə olunur." },
-      { "question": "Deep copy və shallow copy fərqi nədir?", "answer": "Shallow copy bir səviyyəlik kopyadır, deep copy isə bütün səviyyələri kopyalayır." },
-      { "question": "Spread operator və Object.assign fərqi nədir?", "answer": "Spread ES6 sintaksisidir, Object.assign daha köhnə üsuldur; hər ikisi obyekt birləşdirmək üçündür." },
-      { "question": "Destructuring nədir?", "answer": "Array və obyektlərdən məlumat çıxarmaq üçün qısa sintaksisdir." },
-      { "question": "Immediately Invoked Generator necə çağırılır?", "answer": "(function* () { yield 1; })().next();" },
-      { "question": "Hoisting-in riskləri nədir?", "answer": "Dəyişənlərin `undefined` olması və gözlənilməz davranışlara səbəb ola bilməsidir." },
-      { "question": "Callback error-first pattern nədir?", "answer": "Node.js-də ənənəvi callback-lərin ilk arqumenti error olur (`callback(err, data)`)." },
-      { "question": "Promise.resolve və Promise.reject nə edir?", "answer": "Promise-ləri əl ilə uğurlu və ya uğursuz vəziyyətə gətirir." },
-      { "question": "Promise.finally nə edir?", "answer": "Uğur və ya səhv halından asılı olmayaraq hər zaman işləyir." },
-      { "question": "Event delegation nədir?", "answer": "Hadisəni valideynə qoşaraq bütün övlad elementləri üçün idarə etmək üsuludur." },
-      { "question": "Async Iterator nədir?", "answer": "Asinxron məlumat ardıcıllığını `for await...of` ilə iterasiya etməyə imkan verir." },
-      { "question": "Temporal Dead Zone nədir?", "answer": "`let` və `const` dəyişənləri təyin olunmadan istifadə edilən mərhələdir." },
-      { "question": "Function parameter destructuring necə edilir?", "answer": "Parametr olaraq obyekt və ya array parçalanaraq qəbul edilir, məsələn `function fn({a,b}){}`" },
-      { "question": "Dynamic import nədir?", "answer": "Modulu asinxron şəkildə yükləməyə imkan verir (`import('module.js')`)." },
-      { "question": "Module export və default export fərqi nədir?", "answer": "Bir modulda bir default export, amma çox sayda named export ola bilər." },
-      { "question": "Revealing module pattern nədir?", "answer": "Funksiyalar və dəyişənləri yalnız qaytarılan obyekt vasitəsilə əlçatan etmək üsuludur." },
-      { "question": "Event loop-un stack və queue fərqi nədir?", "answer": "Stack sinxron kodu, queue isə callback və promise-ləri saxlayır." },
-      { "question": "Microtask və macrotask fərqi nədir?", "answer": "Microtask (promise) queue prioritetlidir, macrotask (timeout) isə sonra işlənir." },
-      { "question": "Scope chain nədir?", "answer": "Daxili funksiyanın xarici scope-lara ardıcıl baxış mexanizmidir." },
-      { "question": "Block scope ilə function scope fərqi nədir?", "answer": "`let` və `const` block-a, `var` isə funksiyaya bağlıdır." },
-      { "question": "Arrow function 'arguments' obyektini niyə dəstəkləmir?", "answer": "Çünki arrow function-ın öz `arguments` konteksti yoxdur." },
-      { "question": "Bind metodunun istifadəsi nə vaxt lazımdır?", "answer": "`this` konteksti itiriləndə (məsələn event listener-də) istifadə olunur." },
-      { "question": "Function memoization harada istifadə olunur?", "answer": "Məsələn, API nəticələrinin və ya hesablamaların cache edilməsi üçün." },
-      { "question": "Function decorator nədir?", "answer": "Mövcud funksiyanın davranışını dəyişmədən üzərinə əlavə xüsusiyyətlər əlavə edən funksiya." },
-      { "question": "Partial application nədir?", "answer": "Funksiya arqumentlərinin bir hissəsini əvvəlcədən doldurmaq üsuludur." },
-      { "question": "Callback-lər Promise-lərlə necə əvəz olunur?", "answer": "Callback funksiyalar əvəzinə Promise return edən funksiyalar yazılır." },
-      { "question": "Lazy evaluation nədir?", "answer": "Dəyərin yalnız lazım olduqda hesablanması üsuludur." },
-      { "question": "Immediately invoked async function necə yazılır?", "answer": "(async()=>{await someTask();})();" }
+      {
+        "title": "İki ədədi toplayan funksiya",
+        "description": "İki ədədi qəbul edib cəmini qaytaran funksiya yazın.",
+        "solution": "function sum(a, b) {\n  return a + b;\n}\n\n// Nümunə:\nconsole.log(sum(5, 10)); // 15"
+      },
+      {
+        "title": "Ən böyük ədədi tap",
+        "description": "Massivdəki ən böyük ədədi tapın.",
+        "solution": "function findMaxNumber(arr) {\n  if (arr.length === 0) return undefined;\n  return Math.max(...arr);\n}\n\n// Nümunə:\nconsole.log(findMaxNumber([1, 45, 23, 8, 99])); // 99"
+      },
+      {
+        "title": "Closure Counter",
+        "description": "Hər çağırışda 1 artıran closure yazın.",
+        "solution": "function createCounter() {\n  let count = 0;\n  return function() {\n    count++;\n    return count;\n  };\n}\n\n// Nümunə:\nconst counter = createCounter();\nconsole.log(counter()); // 1\nconsole.log(counter()); // 2"
+      },
+      {
+        "title": "Delay Funksiya",
+        "description": "`setTimeout` ilə 2 saniyə sonra mesaj verin.",
+        "solution": "function showDelayedMessage(message, delay) {\n  setTimeout(() => {\n    console.log(message);\n  }, delay);\n}\n\n// Nümunə:\nshowDelayedMessage(\"Mesaj 2 saniyə sonra göründü\", 2000);"
+      },
+      {
+        "title": "Fullname qaytaran funksiya",
+        "description": "Ad və soyadı birləşdirib qaytarsın.",
+        "solution": "const getFullName = (firstName, lastName) => {\n  return `${firstName} ${lastName}`;\n};\n\n// Nümunə:\nconsole.log(getFullName(\"Ali\", \"Valiyev\")); // \"Ali Valiyev\""
+      },
+      {
+        "title": "Array Filter",
+        "description": "Cüt ədədləri qaytaran funksiya yazın.",
+        "solution": "function filterEvenNumbers(arr) {\n  return arr.filter(number => number % 2 === 0);\n}\n\n// Nümunə:\nconsole.log(filterEvenNumbers([1, 2, 3, 4, 5, 6])); // [2, 4, 6]"
+      },
+      {
+        "title": "Sum Reduce ilə",
+        "description": "Massiv cəmini reduce ilə tapın.",
+        "solution": "function sumArrayWithReduce(arr) {\n  return arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);\n}\n\n// Nümunə:\nconsole.log(sumArrayWithReduce([10, 20, 30, 40])); // 100"
+      },
+      {
+        "title": "Debounce",
+        "description": "Funksiyanın təkrarlanan çağırışlarını gecikdirin.",
+        "solution": "function debounce(func, delay) {\n  let timeoutId;\n  return function(...args) {\n    const context = this;\n    clearTimeout(timeoutId);\n    timeoutId = setTimeout(() => func.apply(context, args), delay);\n  };\n}\n\n// Nümunə istifadəsi (bir input elementi ilə):\nconst myInput = document.getElementById('search');\nconst handleSearch = (e) => console.log(`Axtarış: ${e.target.value}`);\nmyInput.addEventListener('keyup', debounce(handleSearch, 500));"
+      },
+      {
+        "title": "Throttle",
+        "description": "Funksiyanı müəyyən intervalda çağırın.",
+        "solution": "function throttle(func, limit) {\n  let inThrottle = false;\n  return function(...args) {\n    const context = this;\n    if (!inThrottle) {\n      func.apply(context, args);\n      inThrottle = true;\n      setTimeout(() => inThrottle = false, limit);\n    }\n  };\n}\n\n// Nümunə istifadəsi (scroll hadisəsi ilə):\nconst handleScroll = () => console.log('Scroll!');\nwindow.addEventListener('scroll', throttle(handleScroll, 1000));"
+      },
+      {
+        "title": "Promise ilə Fetch",
+        "description": "API nəticəsini console-a yazdırın.",
+        "solution": "function fetchDataWithPromise() {\n  fetch('https://jsonplaceholder.typicode.com/posts/1')\n    .then(response => {\n      if (!response.ok) {\n        throw new Error('Network response was not ok');\n      }\n      return response.json();\n    })\n    .then(data => {\n      console.log('Alınan data:', data);\n    })\n    .catch(error => {\n      console.error('Fetch əməliyyatında problem:', error);\n    });\n}\n\n// Nümunə:\nfetchDataWithPromise();"
+      },
+      {
+        "title": "Async Await",
+        "description": "Async funksiyada await istifadə edin.",
+        "solution": "async function fetchDataWithAsyncAwait() {\n  try {\n    const response = await fetch('https://jsonplaceholder.typicode.com/users/1');\n    if (!response.ok) {\n      throw new Error('Network response was not ok');\n    }\n    const data = await response.json();\n    console.log('Async/Await ilə alınan data:', data);\n    return data;\n  } catch (error) {\n    console.error('Fetch əməliyyatında problem:', error);\n  }\n}\n\n// Nümunə:\nfetchDataWithAsyncAwait();"
+      },
+      {
+        "title": "Recursive Factorial",
+        "description": "Ədədin faktorialını hesablayın.",
+        "solution": "function factorial(n) {\n  if (n < 0) return undefined; // Faktorial mənfi ədədlər üçün təyin olunmayıb\n  if (n === 0 || n === 1) {\n    return 1;\n  }\n  return n * factorial(n - 1);\n}\n\n// Nümunə:\nconsole.log(factorial(5)); // 120"
+      },
+      {
+        "title": "Arrow Function ilə Map",
+        "description": "Massivdəki ədədləri 2 ilə vurun.",
+        "solution": "const doubleNumbers = (arr) => arr.map(number => number * 2);\n\n// Nümunə:\nconsole.log(doubleNumbers([1, 5, 10])); // [2, 10, 20]"
+      },
+      {
+        "title": "Bind nümunəsi",
+        "description": "`this` kontekstini bağlayın.",
+        "solution": "const user = {\n  name: 'Ali',\n  sayHi: function() {\n    console.log(`Salam, mən ${this.name}`);\n  }\n};\n\nconst unboundFunc = user.sayHi;\n// unboundFunc(); // TypeError: Cannot read property 'name' of undefined (və ya window)\n\nconst boundFunc = user.sayHi.bind(user);\nboundFunc(); // \"Salam, mən Ali\""
+      },
+      {
+        "title": "Call nümunəsi",
+        "description": "`call` ilə funksiyanı başqa obyektlə çağırın.",
+        "solution": "function introduce(city, country) {\n  console.log(`Mən ${this.name}. ${city}, ${country}-da yaşayıram.`);\n}\n\nconst person1 = { name: 'Leyla' };\nconst person2 = { name: 'Samir' };\n\nintroduce.call(person1, 'Bakı', 'Azərbaycan'); // Mən Leyla. Bakı, Azərbaycan-da yaşayıram.\nintroduce.call(person2, 'İstanbul', 'Türkiyə'); // Mən Samir. İstanbul, Türkiyə-da yaşayıram."
+      },
+      {
+        "title": "Apply nümunəsi",
+        "description": "`apply` ilə parametr massivini ötürün.",
+        "solution": "function sum(a, b, c) {\n  return a + b + c;\n}\n\nconst numbers = [10, 20, 5];\n\nconst result = sum.apply(null, numbers);\nconsole.log(result); // 35"
+      },
+      {
+        "title": "Chaining nümunəsi",
+        "description": "Metodları birləşdirin.",
+        "solution": "class Calculator {\n  constructor(initialValue = 0) {\n    this.value = initialValue;\n  }\n\n  add(num) {\n    this.value += num;\n    return this; // 'this' qaytarılır ki, zəncir davam etsin\n  }\n\n  multiply(num) {\n    this.value *= num;\n    return this;\n  }\n\n  getResult() {\n    return this.value;\n  }\n}\n\nconst result = new Calculator(5).add(5).multiply(3).getResult();\nconsole.log(result); // (5 + 5) * 3 = 30"
+      },
+      {
+        "title": "IIFE ilə counter",
+        "description": "IIFE ilə təcrid olunmuş sayğac yaradın.",
+        "solution": "const counter = (function() {\n  let privateCount = 0;\n  return {\n    increment: function() {\n      privateCount++;\n    },\n    getValue: function() {\n      return privateCount;\n    }\n  };\n})();\n\ncounter.increment();\ncounter.increment();\nconsole.log(counter.getValue()); // 2\n// console.log(counter.privateCount); // undefined (private)"
+      },
+      {
+        "title": "Default param",
+        "description": "Parametr ötürülməsə default dəyər olsun.",
+        "solution": "function greet(name = 'qonaq', greeting = 'Salam') {\n  return `${greeting}, ${name}!`;\n}\n\nconsole.log(greet('Ayan'));   // Salam, Ayan!\nconsole.log(greet());         // Salam, qonaq!\nconsole.log(greet(undefined, 'Hello')); // Hello, qonaq!"
+      },
+      {
+        "title": "Spread operator",
+        "description": "İki array birləşdirin.",
+        "solution": "const array1 = [1, 2, 3];\nconst array2 = [4, 5, 6];\n\nconst combinedArray = [...array1, ...array2];\nconsole.log(combinedArray); // [1, 2, 3, 4, 5, 6]"
+      },
+      {
+        "title": "Rest param",
+        "description": "İstənilən sayda ədəd toplayan funksiya.",
+        "solution": "function sumAll(...numbers) {\n  return numbers.reduce((total, num) => total + num, 0);\n}\n\nconsole.log(sumAll(1, 2, 3));       // 6\nconsole.log(sumAll(10, 20, 30, 40)); // 100"
+      },
+      {
+        "title": "Pure Function",
+        "description": "Massivə toxunmadan yeni array qaytarın.",
+        "solution": "function addNumberTo_Array(arr, num) {\n  // Orijinal massivi dəyişdirməmək üçün spread operatoru ilə yeni massiv yaradırıq\n  return [...arr, num];\n}\n\nconst originalArray = [1, 2, 3];\nconst newArray = addNumberTo_Array(originalArray, 4);\n\nconsole.log(newArray);       // [1, 2, 3, 4]\nconsole.log(originalArray); // [1, 2, 3] (dəyişmədi)"
+      },
+      {
+        "title": "Impure Function",
+        "description": "Massivi dəyişdirən nümunə.",
+        "solution": "function addNumberToArray_Impure(arr, num) {\n  // Orijinal massivi birbaşa dəyişdirir (side effect)\n  arr.push(num);\n  return arr;\n}\n\nconst originalArray = [1, 2, 3];\nconst modifiedArray = addNumberToArray_Impure(originalArray, 4);\n\nconsole.log(modifiedArray); // [1, 2, 3, 4]\nconsole.log(originalArray); // [1, 2, 3, 4] (dəyişdi)"
+      },
+      {
+        "title": "Lexical Scope test",
+        "description": "Daxili funksiyadan xarici dəyişənə giriş edin.",
+        "solution": "function outerFunction() {\n  const outerVar = 'Mən xarici funksiyadayam';\n\n  function innerFunction() {\n    // innerFunction öz scope-unda outerVar-ı tapmır,\n    // buna görə lexical scope-a (outerFunction) baxır.\n    console.log(outerVar);\n  }\n\n  innerFunction();\n}\n\nouterFunction(); // \"Mən xarici funksiyadayam\""
+      },
+      {
+        "title": "Promise Chain",
+        "description": "Promise-ləri zəncirvari çağırın.",
+        "solution": "Promise.resolve(10)\n  .then(value => {\n    console.log(`Başlanğıc dəyər: ${value}`);\n    return value * 2; // Növbəti 'then'-ə ötürülür\n  })\n  .then(value => {\n    console.log(`İkiyə vuruldu: ${value}`);\n    return value - 5; // Növbəti 'then'-ə ötürülür\n  })\n  .then(value => {\n    console.log(`Beş çıxıldı, son nəticə: ${value}`);\n  })\n  .catch(error => {\n    console.error('Zəncirdə xəta baş verdi:', error);\n  });"
+      }
     ]
   }
 ]
